@@ -17,214 +17,436 @@
   
     <link rel="icon" href="/favicon.png">
   
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/style.css">
+  
+
 </head>
 <body>
   <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="http://ww4.sinaimg.cn/large/74311666jw1exc4fqfaxbj20e60ifac0.jpg" class="js-avatar">
-			
-		</a>
-
-		<hgroup>
-		  <h1 class="header-author"><a href="/">Junsong</a></h1>
-		</hgroup>
-
-		
-
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						<li>友情链接</li>
-						
-						
-						<li>关于我</li>
-						
-					</ul>
-				</div>
-			</div>
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="#" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-					        
-								<a class="rss" target="_blank" href="#" title="rss">rss</a>
-					        
-								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
-			        
-			        </div>
-				</section>
-				
-
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">I want to be stronger!</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
-</div>
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Junsong’s Blog</a>
+      </h1>
+      
     </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">Junsong</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="http://ww4.sinaimg.cn/large/74311666jw1exc4fqfaxbj20e60ifac0.jpg" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author">Junsong</h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="#" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss">rss</a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-      <div class="body-wrap">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
   
-    <article id="post-二维码扫描、更新与创建" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/10/17/二维码扫描、更新与创建/" class="article-date">
-  	<time datetime="2015-10-16T16:53:38.000Z" itemprop="datePublished">2015-10-17</time>
+    <article id="post-rumTime基础使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/10/rumTime基础使用/" class="article-date">
+  <time datetime="2016-07-10T00:42:29.000Z" itemprop="datePublished">2016-07-10</time>
 </a>
-    </div>
-  
+    
+  </div>
   <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/10/rumTime基础使用/">rumTime基础使用</a>
+    </h1>
+  
+
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="二维码扫描、更新与创建"><a href="#二维码扫描、更新与创建" class="headerlink" title="二维码扫描、更新与创建"></a>二维码扫描、更新与创建</h1><ul>
+        <h2 id="获取对象的所有属性，不包括属性值"><a href="#获取对象的所有属性，不包括属性值" class="headerlink" title="获取对象的所有属性，不包括属性值"></a>获取对象的所有属性，不包括属性值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">- (NSArray *)getAllProperties</div><div class="line">&#123;</div><div class="line">u_int count;   </div><div class="line">objc_property_t *properties  =class_copyPropertyList([self class], &amp;count);  </div><div class="line">NSMutableArray *propertiesArray = [NSMutableArray arrayWithCapacity:count];   </div><div class="line">for (int i = 0; i&lt;count; i++)</div><div class="line">&#123;</div><div class="line">const char* propertyName =property_getName(properties[i]);</div><div class="line">[propertiesArray addObject: [NSString stringWithUTF8String: propertyName]];   </div><div class="line">&#125;   </div><div class="line">free(properties);   </div><div class="line">return propertiesArray;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="获取对象的所有属性-以及属性值"><a href="#获取对象的所有属性-以及属性值" class="headerlink" title="获取对象的所有属性 以及属性值"></a>获取对象的所有属性 以及属性值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- (NSDictionary *)properties_aps</div><div class="line">&#123;</div><div class="line">NSMutableDictionary *props = [NSMutableDictionary dictionary];   </div><div class="line">unsigned int outCount, i;   </div><div class="line">objc_property_t *properties = class_copyPropertyList([self class], &amp;outCount);   </div><div class="line">for (i = 0; i&lt;outCount; i++)</div><div class="line">&#123;</div><div class="line">objc_property_t property = properties[i];</div><div class="line">const char* char_f =property_getName(property);</div><div class="line">NSString *propertyName = [NSString stringWithUTF8String:char_f];</div><div class="line">id propertyValue = [self valueForKey:(NSString *)propertyName];   </div><div class="line">if (propertyValue) [props setObject:propertyValue forKey:propertyName];   </div><div class="line">&#125;   </div><div class="line">free(properties);   </div><div class="line">return props;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="获取对象的所有方法"><a href="#获取对象的所有方法" class="headerlink" title="获取对象的所有方法"></a>获取对象的所有方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">-(void)printMothList</div><div class="line">&#123;</div><div class="line">unsigned int mothCout_f =0;</div><div class="line">Method* mothList_f = class_copyMethodList([self class],&amp;mothCout_f);</div><div class="line">for(int i=0;i&lt;mothCout_f;i++)</div><div class="line">&#123;</div><div class="line">Method temp_f = mothList_f[i];</div><div class="line">IMP imp_f = method_getImplementation(temp_f);</div><div class="line">SEL name_f = method_getName(temp_f);</div><div class="line">const char* name_s =sel_getName(method_getName(temp_f));</div><div class="line">int arguments = method_getNumberOfArguments(temp_f);</div><div class="line">const char* encoding =method_getTypeEncoding(temp_f);</div><div class="line">NSLog(@&quot;方法名：%@,参数个数：%d,编码方式：%@&quot;,[NSString stringWithUTF8String:name_s],</div><div class="line">arguments,[NSString stringWithUTF8String:encoding]);</div><div class="line">&#125;</div><div class="line">free(mothList_f);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/10/rumTime基础使用/" data-id="ciqfvmde50000kd0uosu7hi8y" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-多线程之NSOperation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/10/多线程之NSOperation/" class="article-date">
+  <time datetime="2016-07-10T00:27:41.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/10/多线程之NSOperation/">多线程之NSOperation</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="warning-tip"><a href="#warning-tip" class="headerlink" title="warning tip"></a>warning tip</h1><ul>
+<li>GCD中的global并行队列是单例，只是在栅栏队列里由于不知名原因，表现得不是一个队列，但是实际还是一个单例</li>
+<li>开发中要自定义一个全局队列的话使用正常的单例就可以了</li>
+</ul>
+<hr>
+<ul>
+<li>NSOperation有两个子类，<code>NSBlockOperation</code>和<code>NSInvocationOperation</code>，正常情况它们是这样使用的</li>
+<li>NSBlockOperation</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1. 封装任务</span></div><div class="line"><span class="built_in">NSBlockOperation</span> *op1 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="comment">// 主线程</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"1---%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;];</div><div class="line"></div><div class="line"><span class="comment">// 2.追加其它任务</span></div><div class="line"><span class="comment">// 注意: 在没有队列的情况下, 如果给BlockOperation追加其它任务, 那么其它任务会在子线程中执行</span></div><div class="line">[op1 addExecutionBlock:^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"2---%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;];</div><div class="line">[op1 addExecutionBlock:^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"3---%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;];</div><div class="line"></div><div class="line"><span class="comment">// 3.启动任务</span></div><div class="line">[op1 start];</div></pre></td></tr></table></figure>
+<ul>
+<li>NSInvocationOperation</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 注意: 父类不具备封装操作的能力</span></div><div class="line"><span class="comment">//    NSOperation *op = [[NSOperation alloc] init];</span></div><div class="line"></div><div class="line"><span class="comment">// 1.封装任务</span></div><div class="line"><span class="built_in">NSInvocationOperation</span> *op1 = [[<span class="built_in">NSInvocationOperation</span> alloc] initWithTarget:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(run) object:<span class="literal">nil</span>];</div><div class="line"><span class="comment">// 2.要想执行任务必须调用start</span></div><div class="line">[op1 start];</div><div class="line"></div><div class="line"><span class="built_in">NSInvocationOperation</span> *op2 = [[<span class="built_in">NSInvocationOperation</span> alloc] initWithTarget:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(run2) object:<span class="literal">nil</span>];</div><div class="line">[op2 start];</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)run</div><div class="line">&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;</div><div class="line">- (<span class="keyword">void</span>)run2</div><div class="line">&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>上面的代码并没有主动控制线程，NSInvocationOperation的执行线程都是在主线程中，NSBlockOperation第一个block在主线程中，追加的则在子线程中，一般开发中我们不会这样直接使用，需要配合队列使用</li>
+<li><p>配合队列很简单</p>
+</li>
+<li><p>NSOperationQueue</p>
+</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.创建队列</span></div><div class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</div><div class="line"><span class="comment">// 2.创建任务</span></div><div class="line"></div><div class="line"><span class="built_in">NSBlockOperation</span> *op1 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"1 == %@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;];</div><div class="line"><span class="built_in">NSBlockOperation</span> *op2 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"2 == %@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;];</div><div class="line"></div><div class="line"><span class="comment">// 注意: 如果是使用block来封装任务, 那么有一种更简便的方法</span></div><div class="line"><span class="comment">// 只要利用队列调用addOperationWithBlock:方法, 系统内部会自动封装成一个NSBlockOperation \</span></div><div class="line">然后再添加到队列中</div><div class="line">[queue addOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"3 == %@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;];</div><div class="line"></div><div class="line"><span class="comment">// 3.添加任务到队列</span></div><div class="line">[queue addOperation:op1];</div><div class="line">[queue addOperation:op2];</div></pre></td></tr></table></figure>
+<ul>
+<li>NSInvocationOperation</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.创建队列</span></div><div class="line"><span class="comment">/*</span></div><div class="line">GCD中有哪些队列:</div><div class="line">并发: 自己创建, 全局</div><div class="line">串行: 自己创建, 主队列</div><div class="line"></div><div class="line">NSOperationQueue:</div><div class="line">主队列: mainQueue</div><div class="line">自己创建: 会在子线程中执行</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</div><div class="line"><span class="comment">// 2.创建任务</span></div><div class="line"><span class="comment">// 只要是自己创建的队列, 就会在子线程中执行</span></div><div class="line"><span class="comment">// 而且默认就是并发执行</span></div><div class="line"><span class="built_in">NSInvocationOperation</span> *op1 = [[<span class="built_in">NSInvocationOperation</span> alloc] initWithTarget:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(download1) object:<span class="literal">nil</span>];</div><div class="line"><span class="built_in">NSInvocationOperation</span> *op2 = [[<span class="built_in">NSInvocationOperation</span> alloc] initWithTarget:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(download2) object:<span class="literal">nil</span>];</div><div class="line"></div><div class="line"><span class="comment">// 3.添加任务到队列中</span></div><div class="line"><span class="comment">// 只要将任务添加到队列中, 队列会自动调用start</span></div><div class="line">[queue addOperation:op1];</div><div class="line">[queue addOperation:op2];</div><div class="line"></div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)download1</div><div class="line">&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"1 == %@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;</div><div class="line">- (<span class="keyword">void</span>)download2</div><div class="line">&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"2 == %@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>上面的都会自动创建多个线程同时进行，所以都是并行队列，如果想要串行执行，就把最大并行数设置为1就可以了</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">queue.maxConcurrentOperationCount = <span class="number">1</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>NSOperation有个好处就是可以自定义任务</li>
+<li>创建一个继承自NSOperation的对象</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">HJSOperation</span> : <span class="title">NSOperation</span></span></div></pre></td></tr></table></figure>
+<ul>
+<li>然后.m文件里把想要执行的任务填写在重写的main函数里</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">只要将任务添加到队列中, 那么队列在执行自定义任务的时候</div><div class="line">就会自动调用main方法</div><div class="line">*/</div><div class="line">- (<span class="keyword">void</span>)main</div><div class="line">&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%s, %@"</span>, __func__, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>自定义NSOperation的操作方法</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// 1.创建队列</span></div><div class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</div><div class="line"><span class="comment">// 2.创建任务</span></div><div class="line"><span class="comment">// 自定义任务的好处: 提高代码的复用性</span></div><div class="line">XMGOperation *op1 = [[XMGOperation alloc] init];</div><div class="line">XMGOperation *op2 = [[XMGOperation alloc] init];</div><div class="line"></div><div class="line"><span class="comment">// 3.添加任务到队列</span></div><div class="line">[queue addOperation:op1];</div><div class="line">[queue addOperation:op2];</div></pre></td></tr></table></figure>
+<h2 id="NSOperation的暂停、恢复和取消"><a href="#NSOperation的暂停、恢复和取消" class="headerlink" title="NSOperation的暂停、恢复和取消"></a>NSOperation的暂停、恢复和取消</h2><ul>
+<li>NSOperation中还有暂停（suspended），恢复（！suspended）和取消（cancelAllOperations）功能，其实操作很简单，就拿到对应的队列操作就可以了，但是有些注意点</li>
+<li>如果是一个串行队列，里面有多个任务，当队列设置为取消或者暂停的时候，那么正在执行的任务不会暂停，知道执行结束，下一个任务不会再执行</li>
+<li>如下面的多个任务</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">self.queue = [[NSOperationQueue alloc] init];</div><div class="line"></div><div class="line">self.queue.maxConcurrentOperationCount = 1;</div><div class="line">// 2.创建任务</div><div class="line">/*</div><div class="line">[self.queue addOperationWithBlock:^&#123;</div><div class="line">NSLog(@&quot;++++++++++++++++++++++++++++++++++++++&quot;);</div><div class="line">//        [NSThread sleepForTimeInterval:1];</div><div class="line">//        NSLog(@&quot;1 == %@&quot;, [NSThread currentThread]);</div><div class="line">for (int i = 0; i &lt; 10000; i++) &#123; // 500</div><div class="line">NSLog(@&quot;%i ==== %@&quot;, i, [NSThread currentThread]);</div><div class="line">&#125;</div><div class="line">&#125;];</div><div class="line">[self.queue addOperationWithBlock:^&#123;</div><div class="line">NSLog(@&quot;++++++++++++++++++++++++++++++++++++++&quot;);</div><div class="line">//        [NSThread sleepForTimeInterval:1];</div><div class="line">//        NSLog(@&quot;2 == %@&quot;, [NSThread currentThread]);</div><div class="line">for (int i = 0; i &lt; 10000; i++) &#123;</div><div class="line">NSLog(@&quot;%i ==== %@&quot;, i, [NSThread currentThread]);</div><div class="line">&#125;</div><div class="line">&#125;];</div><div class="line">[self.queue addOperationWithBlock:^&#123;</div><div class="line">NSLog(@&quot;++++++++++++++++++++++++++++++++++++++&quot;);</div><div class="line">//        [NSThread sleepForTimeInterval:1];</div><div class="line">//        NSLog(@&quot;3 == %@&quot;, [NSThread currentThread]);</div><div class="line">for (int i = 0; i &lt; 10000; i++) &#123;</div><div class="line">NSLog(@&quot;%i ==== %@&quot;, i, [NSThread currentThread]);</div><div class="line">&#125;</div><div class="line">&#125;];</div><div class="line">[self.queue addOperationWithBlock:^&#123;</div><div class="line">NSLog(@&quot;++++++++++++++++++++++++++++++++++++++&quot;);</div><div class="line">//        [NSThread sleepForTimeInterval:1];</div><div class="line">//        NSLog(@&quot;4 == %@&quot;, [NSThread currentThread]);</div><div class="line">for (int i = 0; i &lt; 10000; i++) &#123;</div><div class="line">NSLog(@&quot;%i ==== %@&quot;, i, [NSThread currentThread]);</div><div class="line">&#125;</div><div class="line">&#125;];</div><div class="line">[self.queue addOperationWithBlock:^&#123;</div><div class="line">NSLog(@&quot;++++++++++++++++++++++++++++++++++++++&quot;);</div><div class="line">//        [NSThread sleepForTimeInterval:1];</div><div class="line">//        NSLog(@&quot;5 == %@&quot;, [NSThread currentThread]);</div><div class="line">for (int i = 0; i &lt; 10000; i++) &#123;</div><div class="line">NSLog(@&quot;%i ==== %@&quot;, i, [NSThread currentThread]);</div><div class="line">&#125;</div><div class="line">&#125;];</div><div class="line">[self.queue addOperationWithBlock:^&#123;</div><div class="line">NSLog(@&quot;++++++++++++++++++++++++++++++++++++++&quot;);</div><div class="line">//        [NSThread sleepForTimeInterval:1];</div><div class="line">//        NSLog(@&quot;6 == %@&quot;, [NSThread currentThread]);</div><div class="line">for (int i = 0; i &lt; 10000; i++) &#123;</div><div class="line">NSLog(@&quot;%i ==== %@&quot;, i, [NSThread currentThread]);</div><div class="line">&#125;</div><div class="line">&#125;];</div><div class="line">*/</div></pre></td></tr></table></figure>
+<ul>
+<li>暂停代码</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)touchesBegan:(<span class="built_in">NSSet</span> *)touches withEvent:(<span class="built_in">UIEvent</span> *)event</div><div class="line">&#123;</div><div class="line"><span class="comment">//    [self operation1];</span></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line">// 只要设置队列的suspended为YES, 那么就会暂停队列中其它任务的执行</div><div class="line">// 也就是说不会再继续执行没有执行到得任务</div><div class="line">// 只要设置队列的suspended为NO, 那么就会恢复队列中其它任务的执行</div><div class="line">if (self.queue.suspended) &#123;</div><div class="line">self.queue.suspended = NO;</div><div class="line">&#125;else</div><div class="line">&#123;</div><div class="line">// 注意: 设置为暂停之后, 不会立即暂停</div><div class="line">// 会继续执行当前正在执行的任务, 直到当前任务执行完毕, 就不会执行下一个任务了</div><div class="line">// 也就是说, 暂停其实是暂停下一个任务, 而不能暂停当前任务</div><div class="line">// 注意: 暂停是可以恢复的</div><div class="line">self.queue.suspended = YES;</div><div class="line">&#125;</div><div class="line">*/</div><div class="line"></div><div class="line"><span class="comment">// 取消队列中所有的任务的执行</span></div><div class="line"><span class="comment">// 取消和暂停一样, 是取消后面的任务, 不能取消当前正在执行的任务</span></div><div class="line"><span class="comment">// 注意: 取消是不可以恢复的</span></div><div class="line">[<span class="keyword">self</span>.queue cancelAllOperations];</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>由于暂停受到如此的限制，所以即使苹果也建议我们在自定义的任务中，做耗时操作时，可以分段做出一些判断，当察觉到线程状态改变时，及时主动停止任务</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)main</div><div class="line">&#123;</div><div class="line"><span class="comment">// 耗时操作1</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123; <span class="comment">// 500</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%i ==== %@"</span>, i, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"++++++++++++++++++++++++++++++++++++++"</span>);</div><div class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.isCancelled) &#123;</div><div class="line"><span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 耗时操作2</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123; <span class="comment">// 500</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%i ==== %@"</span>, i, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span> (<span class="keyword">self</span>.isCancelled) &#123;</div><div class="line"><span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"++++++++++++++++++++++++++++++++++++++"</span>);</div><div class="line"><span class="comment">// 好所操作3</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123; <span class="comment">// 500</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%i ==== %@"</span>, i, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>自定义任务只能访问isCancelled属性，在几个耗时代码之间插入判断，当线程被取消时，主动return</li>
+</ul>
+<hr>
+<h2 id="线程依赖"><a href="#线程依赖" class="headerlink" title="线程依赖"></a>线程依赖</h2><ul>
+<li>这里有点类似于GCD中的栅栏，但是它更厉害一些，栅栏的使用必须要在同一队列中，而NSOperation没有这样的限制</li>
+<li>GCD栅栏</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">dispatch_queue_t</span> queue = dispatch_queue_create(<span class="string">"com.520it.lnj"</span>, DISPATCH_QUEUE_CONCURRENT);</div><div class="line"><span class="built_in">dispatch_queue_t</span> queue2 = dispatch_queue_create(<span class="string">"com.520it.lmj"</span>, DISPATCH_QUEUE_CONCURRENT);</div><div class="line"></div><div class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"1-------%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"2-------%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;);</div><div class="line"><span class="built_in">dispatch_async</span>(queue, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"3-------%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">dispatch_barrier_async(queue2, ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"4-------%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>上面的栅栏无法起到限制作用，栅栏依然有可能在前面的异步之前执行，因为必须要在同一队列中</li>
+<li>再来看看NSOperation的</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.创建队列</span></div><div class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</div><div class="line"><span class="built_in">NSOperationQueue</span> *queue2 = [[<span class="built_in">NSOperationQueue</span> alloc] init];</div><div class="line"></div><div class="line"><span class="comment">// 2.创建任务</span></div><div class="line"><span class="built_in">NSBlockOperation</span> *op1 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"1-------%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;];</div><div class="line"><span class="built_in">NSBlockOperation</span> *op2 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"2-------%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;];</div><div class="line"><span class="built_in">NSBlockOperation</span> *op3 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"3-------%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;];</div><div class="line"><span class="built_in">NSBlockOperation</span> *op4 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"4-------%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%i"</span>, i);</div><div class="line">&#125;</div><div class="line">&#125;];</div><div class="line"><span class="built_in">NSBlockOperation</span> *op5 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"5-------%@"</span>, [<span class="built_in">NSThread</span> currentThread]);</div><div class="line">&#125;];</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 3.添加依赖</span></div><div class="line">[op5 addDependency:op1];</div><div class="line">[op5 addDependency:op2];</div><div class="line">[op5 addDependency:op3];</div><div class="line">[op5 addDependency:op4];</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 4.监听op4什么时候执行完毕</span></div><div class="line">op4.completionBlock = ^&#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"op4中所有的操作都执行完毕了"</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 4.添加任务到队列</span></div><div class="line">[queue addOperation:op1];</div><div class="line">[queue addOperation:op2];</div><div class="line">[queue2 addOperation:op3];</div><div class="line">[queue2 addOperation:op4];</div><div class="line">[queue addOperation:op5];</div></pre></td></tr></table></figure>
+<ul>
+<li>上面的代码无论执行多少次，<code>op5</code>都只会在最后执行，并且没有队列限制</li>
+</ul>
+<hr>
+<h2 id="线程间的通信"><a href="#线程间的通信" class="headerlink" title="线程间的通信"></a>线程间的通信</h2><ul>
+<li>知道了怎么添加线程依赖后，就可以来学习线程通信了</li>
+<li>因为线程通信牵扯到线程的先后执行，只有当耗时操作完成后，才能来通知主线程刷新UI，这就是线程通信</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.创建一个新的队列</span></div><div class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</div><div class="line"></div><div class="line"><span class="comment">// 2.添加任务(操作)</span></div><div class="line">[queue addOperationWithBlock:^&#123;</div><div class="line"><span class="comment">// 2.1在子线程中下载图片</span></div><div class="line"><span class="built_in">NSURL</span> *url  = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://imgcache.mysodao.com/img2/M04/8C/74/CgAPDk9dyjvS1AanAAJPpRypnFA573_700x0x1.JPG"</span>];</div><div class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSData</span> dataWithContentsOfURL:url];</div><div class="line"><span class="built_in">UIImage</span> *image = [<span class="built_in">UIImage</span> imageWithData:data];</div><div class="line"></div><div class="line"><span class="comment">// 2.2回到主线程更新UI</span></div><div class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</div><div class="line"><span class="keyword">self</span>.imageView.image = image;</div><div class="line">&#125;];</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<ul>
+<li>上面的代码没有体现出线程依赖的使用，下面弄个有线程依赖的</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.创建一个队列</span></div><div class="line"><span class="comment">// 一般情况下, 在做企业开发时候, 都会定义一个全局的自定义队列, 便于使用</span></div><div class="line"><span class="built_in">NSOperationQueue</span> *queue = [[<span class="built_in">NSOperationQueue</span> alloc] init];</div><div class="line"></div><div class="line"><span class="comment">// 2.添加一个操作下载第一张图片</span></div><div class="line">__block <span class="built_in">UIImage</span> *image1 = <span class="literal">nil</span>;</div><div class="line"><span class="built_in">NSBlockOperation</span> *op1 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">NSURL</span> *url  = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://imgcache.mysodao.com/img2/M04/8C/74/CgAPDk9dyjvS1AanAAJPpRypnFA573_700x0x1.JPG"</span>];</div><div class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSData</span> dataWithContentsOfURL:url];</div><div class="line">image1 = [<span class="built_in">UIImage</span> imageWithData:data];</div><div class="line">&#125;];</div><div class="line"></div><div class="line"><span class="comment">// 3.添加一个操作下载第二张图片</span></div><div class="line">__block <span class="built_in">UIImage</span> *image2 = <span class="literal">nil</span>;</div><div class="line"><span class="built_in">NSBlockOperation</span> *op2 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">NSURL</span> *url  = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://imgcache.mysodao.com/img1/M02/EE/B5/CgAPDE-kEtqjE8CWAAg9m-Zz4qo025-22365300.JPG"</span>];</div><div class="line"><span class="built_in">NSData</span> *data = [<span class="built_in">NSData</span> dataWithContentsOfURL:url];</div><div class="line">image2 = [<span class="built_in">UIImage</span> imageWithData:data];</div><div class="line">&#125;];</div><div class="line"><span class="comment">// 4.添加一个操作合成图片</span></div><div class="line"><span class="built_in">NSBlockOperation</span> *op3 = [<span class="built_in">NSBlockOperation</span> blockOperationWithBlock:^&#123;</div><div class="line"><span class="built_in">UIGraphicsBeginImageContext</span>(<span class="built_in">CGSizeMake</span>(<span class="number">200</span>, <span class="number">200</span>));</div><div class="line">[image1 drawInRect:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">200</span>)];</div><div class="line">[image2 drawInRect:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">200</span>)];</div><div class="line"><span class="built_in">UIImage</span> *res = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</div><div class="line"><span class="built_in">UIGraphicsEndImageContext</span>();</div><div class="line"></div><div class="line"><span class="comment">// 5.回到主线程更新UI</span></div><div class="line">[[<span class="built_in">NSOperationQueue</span> mainQueue] addOperationWithBlock:^&#123;</div><div class="line"><span class="keyword">self</span>.imageView.image = res;</div><div class="line">&#125;];</div><div class="line">&#125;];</div><div class="line"></div><div class="line"><span class="comment">// 6.添加依赖</span></div><div class="line"></div><div class="line">[op3 addDependency:op1];</div><div class="line">[op3 addDependency:op2];</div><div class="line"></div><div class="line"><span class="comment">// 7.添加操作到队列中</span></div><div class="line">[queue addOperation:op1];</div><div class="line">[queue addOperation:op2];</div><div class="line">[queue addOperation:op3];</div></pre></td></tr></table></figure>
+<ul>
+<li><p>不管怎样，UI的刷新必定在数据下载线程完毕之后</p>
+<h2 id="同步在串行队列里造成死锁的情况解析"><a href="#同步在串行队列里造成死锁的情况解析" class="headerlink" title="同步在串行队列里造成死锁的情况解析"></a>同步在串行队列里造成死锁的情况解析</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line">1：</div><div class="line"></div><div class="line">- (void)viewDidLoad &#123;</div><div class="line"></div><div class="line">//dispatch_sync(dispatch_get_main_queue(), ^&#123;</div><div class="line">//NSLog(@3);</div><div class="line">//死锁原因</div><div class="line">//1:dispatch_sync在等待block语句执行完成，而block语句需要在主线程里执行，所以dispatch_sync如果在主线程调用就会造成死锁</div><div class="line">//2:dispatch_sync是同步的，本身就会阻塞当前线程，也即主线程。而又往主线程里塞进去一个block，所以就会发生死锁。</div><div class="line">//&#125;);</div><div class="line">//dispatch_async(dispatch_get_global_queue(), ^&#123;</div><div class="line">//async 在主线程中 创建了一个异步线程 加入 全局并发队列，async 不会等待block 执行完成，立即返回</div><div class="line"></div><div class="line">NSLog(@2);//不会造成死锁；</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">分析这段代码：view DidLoad 在主线程中，也即dispatch_get_main_queue()中，执行到sync时向dispatch_get_main_queue()插入同步thread，sync会等到后面的block执行完成才返回。sync又在主队列里面，是个串行队列，sync是后面才加入的，前面一个是主线程，所以sync想执行block必须等待前一个主线程执行完成，而主线程却</div><div class="line"></div><div class="line">在等待sync返回，去执行后续工作，从而造成死锁。</div><div class="line"></div><div class="line">2:</div><div class="line"></div><div class="line">dispatch_sync 和 dispatch_async 区别：</div><div class="line"></div><div class="line">dispatch_async(queue,block) async 异步队列，dispatch_async 函数会立即返回, block会在后台异步执行。</div><div class="line">dispatch_sync(queue,block) sync 同步队列，dispatch_sync 函数不会立即返回，即阻塞当前线程,等待 block同步执行完成。</div><div class="line"></div><div class="line">3:</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">GCD Queue 分为三种：</div><div class="line"></div><div class="line">1，The main queue ：主队列，主线程就是在个队列中。</div><div class="line"></div><div class="line">2，Global queues ： 全局并发队列。</div><div class="line"></div><div class="line">3，用户队列:是用函数 dispatch_queue_create 创建的自定义队列</div><div class="line">*/</div></pre></td></tr></table></figure>
+</li>
+<li><p>队列是管理任务的，当我们用dispatch_async或者dispatch_sync这些函数加入队列中的时候，只是把任务塞给了队列</p>
+</li>
+<li>然后由队列来分配线程执行任务</li>
+<li>那么async与sync其实指的就是任务的优先级</li>
+<li>在串行队列中，任务的执行是按顺序的，那么排在最前面的任务优先级最高</li>
+<li>在并行队列中，任务执行不按顺序</li>
+<li>dispatch_sync本身是一个函数，它执行同时又要执行它的代码块，这些任务都是相同优先级，会对线程资源造成抢占</li>
+<li>而在dispatch_async没有任务的顺序强制性，所以，不会造成资源抢占</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/10/多线程之NSOperation/" data-id="ciqfvmdei0004kd0u6kov3hi7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-AFNet上传" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/10/AFNet上传/" class="article-date">
+  <time datetime="2016-07-10T00:25:19.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/10/AFNet上传/">AFNet上传</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>上传</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];</div><div class="line"></div><div class="line"><span class="built_in">NSDictionary</span> *dict = @&#123;<span class="string">@"username"</span>:<span class="string">@"hjs"</span>&#125;;</div><div class="line"></div><div class="line">[manager POST:<span class="string">@"http://120.25.226.186:32812/upload"</span> parameters:dict constructingBodyWithBlock:^(<span class="keyword">id</span>&lt;AFMultipartFormData&gt; formData) &#123;</div><div class="line"></div><div class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> fileURLWithPath:<span class="string">@"/Users/Programer/Desktop/桌面/20140701231656_tfNAZ.jpeg"</span>];</div><div class="line"></div><div class="line">[formData appendPartWithFileURL:url name:<span class="string">@"file"</span> error:<span class="literal">nil</span>];</div><div class="line"></div><div class="line">&#125; success:^(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="keyword">id</span> responseObject) &#123;</div><div class="line"><span class="built_in">NSDictionary</span> *res = responseObject;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,res);</div><div class="line">&#125; failure:^(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="built_in">NSError</span> *error) &#123;</div><div class="line"><span class="keyword">if</span> (error) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"失败"</span>);</div><div class="line">&#125;</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<ul>
+<li>下载</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];</div><div class="line"></div><div class="line">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@&quot;http://120.25.226.186:32812/resources/images/minion_02.png&quot;]];</div><div class="line"></div><div class="line">NSProgress *progress = nil;</div><div class="line"></div><div class="line">NSURLSessionDownloadTask * task = [manager downloadTaskWithRequest:request progress:&amp;progress destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) &#123;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">NSString *cacheP = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];</div><div class="line"></div><div class="line">NSString *path = [cacheP stringByAppendingPathComponent:response.suggestedFilename];</div><div class="line"></div><div class="line">NSLog(@&quot;%@&quot;,path);</div><div class="line"></div><div class="line">NSURL *url = [NSURL fileURLWithPath:path];</div><div class="line">return url;</div><div class="line">&#125; completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) &#123;</div><div class="line"></div><div class="line">&#125;];</div><div class="line"></div><div class="line">//为进度添加观察者</div><div class="line">[progress addObserver:self forKeyPath:@&quot;completedUnitCount&quot; options:NSKeyValueObservingOptionNew context:nil];</div><div class="line"></div><div class="line">[task resume];</div></pre></td></tr></table></figure>
+<ul>
+<li>get请求</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];</div><div class="line"><span class="built_in">NSDictionary</span> *parameters = @&#123;</div><div class="line"><span class="string">@"username"</span>:<span class="string">@"hjsit"</span>,</div><div class="line"><span class="string">@"pwd"</span>:<span class="string">@"hjsit"</span></div><div class="line">&#125;;</div><div class="line">[manager GET:<span class="string">@"http://120.25.226.186:32812/login"</span> parameters:parameters success:^(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="keyword">id</span> responseObject) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[responseObject <span class="keyword">class</span>]);</div><div class="line">&#125; failure:^(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="built_in">NSError</span> *error) &#123;</div><div class="line"></div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<ul>
+<li>监听网络状态</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">// 1.创建网络监听管理者对象</div><div class="line">AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];</div><div class="line">// 2.设置监听</div><div class="line">/*</div><div class="line">AFNetworkReachabilityStatusUnknown          = -1,  未识别</div><div class="line">AFNetworkReachabilityStatusNotReachable     = 0,   未连接</div><div class="line">AFNetworkReachabilityStatusReachableViaWWAN = 1,   3G</div><div class="line">AFNetworkReachabilityStatusReachableViaWiFi = 2,  wifi</div><div class="line">*/</div><div class="line">[manager setReachabilityStatusChangeBlock:^ void(AFNetworkReachabilityStatus status) &#123;</div><div class="line">switch (status) &#123;</div><div class="line">case AFNetworkReachabilityStatusNotReachable:</div><div class="line">NSLog(@&quot;未连接&quot;);</div><div class="line">break;</div><div class="line">case AFNetworkReachabilityStatusReachableViaWWAN:</div><div class="line">NSLog(@&quot;手机自带网络&quot;);</div><div class="line">break;</div><div class="line">case AFNetworkReachabilityStatusReachableViaWiFi:</div><div class="line">NSLog(@&quot;wifi网络&quot;);</div><div class="line">break;</div><div class="line">default:</div><div class="line">NSLog(@&quot;未识别&quot;);</div><div class="line">break;</div><div class="line">&#125;</div><div class="line">&#125;];</div><div class="line"></div><div class="line">// 3.开启监听</div><div class="line">[manager startMonitoring];</div></pre></td></tr></table></figure>
+<ul>
+<li>序列化，数据返回类型</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.创建网络管理者</span></div><div class="line">AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];</div><div class="line"></div><div class="line"><span class="comment">// 2.利用网络管理者发送get请求</span></div><div class="line"><span class="comment">//    NSDictionary *parameters = @&#123;</span></div><div class="line"><span class="comment">//                                 @"username":@"hjsit",</span></div><div class="line"><span class="comment">//                                 @"pwd":@"hjsit",</span></div><div class="line"><span class="comment">//                                 @"type":@"XML"</span></div><div class="line"><span class="comment">//                                 &#125;;</span></div><div class="line">[AFJSONResponseSerializer serializer].acceptableContentTypes = [<span class="built_in">NSSet</span> setWithObject:<span class="string">@"text/xml"</span>];</div><div class="line"><span class="comment">// 告诉AFN, 将返回的数据当做JSON来处理</span></div><div class="line"><span class="comment">//    manager.responseSerializer = [AFJSONRequestSerializer serializer];</span></div><div class="line"><span class="comment">// 告诉AFN, 将返回的数据当做XML来处理</span></div><div class="line"><span class="comment">//    manager.responseSerializer = [AFXMLParserResponseSerializer serializer];</span></div><div class="line"><span class="comment">// 告诉AFN, 将返回的数据当做二进制来数据 (服务器返回什么就是什么)</span></div><div class="line">manager.responseSerializer = [AFHTTPResponseSerializer serializer];</div><div class="line"></div><div class="line">[manager GET:<span class="string">@"http://120.25.226.186:32812/resources/images/minion_02.png"</span> parameters:<span class="literal">nil</span> success:^ <span class="keyword">void</span>(<span class="built_in">NSURLSessionDataTask</span> * task, <span class="keyword">id</span> responseObject) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"请求成功 %@"</span>, [responseObject <span class="keyword">class</span>]);</div><div class="line">&#125; failure:^ <span class="keyword">void</span>(<span class="built_in">NSURLSessionDataTask</span> * operation, <span class="built_in">NSError</span> * error) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"请求失败 %@"</span>, error);</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<ul>
+<li>AFN推荐继承，推荐使用initWithBaseURL,单例</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">+ (<span class="keyword">instancetype</span>)shareNetworkTools2</div><div class="line">&#123;</div><div class="line"><span class="keyword">static</span> XMGNetworkTools2 *instance;</div><div class="line"><span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</div><div class="line"><span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</div><div class="line"></div><div class="line"><span class="built_in">NSURLSessionConfiguration</span> *cfg  = [<span class="built_in">NSURLSessionConfiguration</span> defaultSessionConfiguration];</div><div class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/"</span>];</div><div class="line">instance = [[<span class="keyword">self</span> alloc] initWithBaseURL:url sessionConfiguration:cfg];</div><div class="line">&#125;);</div><div class="line"><span class="keyword">return</span> instance;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>AFN已经封装了HTTPS证书授权代码，直接可以请求，下面是证书授权代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">*</div><div class="line">只要请求的地址是HTTPS的, 就会调用这个代理方法</div><div class="line">我们需要在该方法中告诉系统, 是否信任服务器返回的证书</div><div class="line">Challenge: 挑战 质问 (包含了受保护的区域)</div><div class="line">protectionSpace : 受保护区域</div><div class="line">NSURLAuthenticationMethodServerTrust : 证书的类型是 服务器信任</div><div class="line">*/</div><div class="line">- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *))completionHandler</div><div class="line">&#123;</div><div class="line">//    NSLog(@&quot;didReceiveChallenge %@&quot;, challenge.protectionSpace);</div><div class="line">NSLog(@&quot;%@&quot;, challenge.protectionSpace.authenticationMethod);</div><div class="line">// 1.判断服务器返回的证书类型, 是否是服务器信任</div><div class="line">if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) &#123;</div><div class="line">NSLog(@&quot;是服务器信任的证书&quot;);</div><div class="line">/*</div><div class="line">NSURLSessionAuthChallengeUseCredential = 0,                     使用证书</div><div class="line">NSURLSessionAuthChallengePerformDefaultHandling = 1,            忽略证书(默认的处理方式)</div><div class="line">NSURLSessionAuthChallengeCancelAuthenticationChallenge = 2,     忽略书证, 并取消这次请求</div><div class="line">NSURLSessionAuthChallengeRejectProtectionSpace = 3,            忽略当前这一次, 下一次再询问</div><div class="line">*/</div><div class="line">NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];</div><div class="line">completionHandler(NSURLSessionAuthChallengeUseCredential , credential);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/10/AFNet上传/" data-id="ciqfvmdee0002kd0uvl7g8rlj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-网络环境监听-Reachability" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/10/网络环境监听-Reachability/" class="article-date">
+  <time datetime="2016-07-10T00:19:23.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/10/网络环境监听-Reachability/">网络环境监听(Reachability)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>没事看看这个网络环境监听的东西，待会还要去学英语呢</li>
+<li>我看的这个是属于ASI框架的</li>
+<li>大概看了一下，最核心的判断网络的方法是这个</li>
+<li>SCNetworkReachabilityGetFlags</li>
+<li>这个c函数获取到各种flag，它是系统SystemConfiguration框架里SCNetworkReachability.h里的一个方法</li>
+<li><p>看它的介绍</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">/*!</div><div class="line">@function SCNetworkReachabilityGetFlags</div><div class="line">@discussion Determines if the given target is reachable using the</div><div class="line">current network configuration.</div><div class="line">@param target The network reference associated with the address or name</div><div class="line">to be checked for reachability.</div><div class="line">@param flags A pointer to memory that will be filled with the</div><div class="line">SCNetworkReachabilityFlags detailing the reachability</div><div class="line">of the specified target.</div><div class="line">@result Returns TRUE if the network connection flags are valid;</div><div class="line">FALSE if the status could not be determined.</div><div class="line">*/</div></pre></td></tr></table></figure>
+</li>
+<li><p>大概意思就是根据传入的target（SCNetworkReachabilityRef）来得到当前网络状态</p>
+</li>
+<li><p>让我们看看得到的flag分别怎么处理</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">- (NetworkStatus)networkStatusNewForFlags:(<span class="built_in">SCNetworkReachabilityFlags</span>)flags</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsReachable) == <span class="number">0</span>)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="keyword">return</span> NotReachable;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">NetworkStatus retVal = NotReachable;</div><div class="line"></div><div class="line"><span class="keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsConnectionRequired) == <span class="number">0</span>)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="comment">// if target host is reachable and no connection is required</span></div><div class="line"></div><div class="line"><span class="comment">//  then we'll assume (for now) that your on Wi-Fi</span></div><div class="line"></div><div class="line">retVal = ReachableViaWiFi;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> ((((flags &amp; kSCNetworkReachabilityFlagsConnectionOnDemand ) != <span class="number">0</span>) ||</div><div class="line"></div><div class="line">(flags &amp; kSCNetworkReachabilityFlagsConnectionOnTraffic) != <span class="number">0</span>))</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="comment">// ... and the connection is on-demand (or on-traffic) if the</span></div><div class="line"></div><div class="line"><span class="comment">//     calling application is using the CFSocketStream or higher APIs</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsInterventionRequired) == <span class="number">0</span>)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="comment">// ... and no [user] intervention is needed</span></div><div class="line"></div><div class="line">retVal = ReachableViaWiFi;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="keyword">if</span> ([[[<span class="built_in">UIDevice</span> currentDevice] systemVersion] floatValue] &gt;= <span class="number">7.0</span>)</div><div class="line">&#123;</div><div class="line"><span class="built_in">CTTelephonyNetworkInfo</span> *info = [[<span class="built_in">CTTelephonyNetworkInfo</span> alloc] init];</div><div class="line"><span class="built_in">NSString</span> *currentRadioAccessTechnology = info.currentRadioAccessTechnology;</div><div class="line"><span class="keyword">if</span> (currentRadioAccessTechnology) &#123;</div><div class="line"><span class="keyword">if</span> ([currentRadioAccessTechnology isEqualToString:<span class="built_in">CTRadioAccessTechnologyLTE</span>]) &#123;</div><div class="line"><span class="keyword">return</span> kReachableVia4G;</div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> ([currentRadioAccessTechnology isEqualToString:<span class="built_in">CTRadioAccessTechnologyEdge</span>] || [currentRadioAccessTechnology isEqualToString:<span class="built_in">CTRadioAccessTechnologyGPRS</span>]) &#123;</div><div class="line"><span class="keyword">return</span> kReachableVia2G;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line"><span class="keyword">return</span> kReachableVia3G;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsTransientConnection) == kSCNetworkReachabilityFlagsTransientConnection) &#123;</div><div class="line"><span class="keyword">if</span>((flags &amp; kSCNetworkReachabilityFlagsConnectionRequired) == kSCNetworkReachabilityFlagsConnectionRequired) &#123;</div><div class="line"><span class="keyword">return</span> kReachableVia2G;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> kReachableVia3G;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> kReachableViaWWAN;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">return</span> retVal;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>上面这里将一个方法，一个生产flag的东西当做参数传了进去</p>
+</li>
+<li>很明显，利用runloop进行网络的环境监听</li>
+<li>当有变动时，则会调用ReachabilityCallback函数</li>
+<li><p>这个函数也是有讲究的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">/*!</div><div class="line">@typedef SCNetworkReachabilityCallBack</div><div class="line">@discussion Type of the callback function used when the</div><div class="line">reachability of a network address or name changes.</div><div class="line">@param target The SCNetworkReachability reference being monitored</div><div class="line">for changes.</div><div class="line">@param flags The new SCNetworkReachabilityFlags representing the</div><div class="line">reachability status of the network address/name.</div><div class="line">@param info A C pointer to a user-specified block of data.</div><div class="line">*/</div><div class="line">typedef void (*SCNetworkReachabilityCallBack)	(</div><div class="line">SCNetworkReachabilityRef			target,</div><div class="line">SCNetworkReachabilityFlags			flags,</div><div class="line">void			     *	__nullable	info</div><div class="line">);</div></pre></td></tr></table></figure>
+</li>
+<li><p>看它说明</p>
+<blockquote>
+<p>the callback function used when the reachability of a network address or name changes</p>
+</blockquote>
+</li>
+<li><p>为网络改变而生的回调，哈哈</p>
+</li>
+<li><p>再来看看这个设置callback的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">SCNetworkReachabilitySetCallback</div><div class="line"></div><div class="line">/////////////</div><div class="line">/*!</div><div class="line">@function SCNetworkReachabilitySetCallback</div><div class="line">@discussion Assigns a client to a target, which receives callbacks</div><div class="line">when the reachability of the target changes.</div><div class="line">@param target The network reference associated with the address or</div><div class="line">name to be checked for reachability.</div><div class="line">@param callout The function to be called when the reachability of the</div><div class="line">target changes.  If NULL, the current client for the target</div><div class="line">is removed.</div><div class="line">@param context The SCNetworkReachabilityContext associated with</div><div class="line">the callout.  The value may be NULL.</div><div class="line">@result Returns TRUE if the notification client was successfully set.</div><div class="line">*/</div><div class="line">Boolean</div><div class="line">SCNetworkReachabilitySetCallback		(</div><div class="line">SCNetworkReachabilityRef			target,</div><div class="line">SCNetworkReachabilityCallBack	__nullable	callout,</div><div class="line">SCNetworkReachabilityContext	* __nullable	context</div><div class="line">)				__OSX_AVAILABLE_STARTING(__MAC_10_3,__IPHONE_2_0);</div></pre></td></tr></table></figure>
+</li>
+<li><p>所以，你也可以自己写个网络环境监听，知道系统方法干啥的就行了</p>
+</li>
+<li><p>最后别忘了释放监听</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">- (void)stopNotifier</div><div class="line">&#123;</div><div class="line">if (_reachabilityRef != NULL)</div><div class="line">&#123;</div><div class="line">SCNetworkReachabilityUnscheduleFromRunLoop(_reachabilityRef, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>细看就可以大概了解这些flag是怎么运作的</p>
+</li>
+<li>接下来看看是如何做到实时的网络环境监听的<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">- (BOOL)startNotifier</div><div class="line">&#123;</div><div class="line">BOOL returnValue = NO;</div><div class="line">SCNetworkReachabilityContext context = &#123;0, (__bridge void *)(self), NULL, NULL, NULL&#125;;</div><div class="line"></div><div class="line">if (SCNetworkReachabilitySetCallback(_reachabilityRef, ReachabilityCallback, &amp;context))</div><div class="line">&#123;</div><div class="line">if (SCNetworkReachabilityScheduleWithRunLoop(_reachabilityRef, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode))</div><div class="line">&#123;</div><div class="line">returnValue = YES;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">return returnValue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li>这里附上一个监测ipv6的东西</li>
+<li><p>这里先贴上两个工具方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">*	@brief	判断是否为IPv4地址</div><div class="line">*</div><div class="line">*	@return</div><div class="line">*/</div><div class="line">- (BOOL)isIPv4Address:(NSString *)addr &#123;</div><div class="line"></div><div class="line">if (addr == nil) &#123;</div><div class="line">return NO;</div><div class="line">&#125;</div><div class="line">const char *utf8 = [addr UTF8String];</div><div class="line">// Check valid IPv4.</div><div class="line">struct in_addr dst;</div><div class="line">int success = inet_pton(AF_INET, utf8, &amp;(dst.s_addr));</div><div class="line">return success == 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line">*	@brief	判断是否为IPv6地址</div><div class="line">*</div><div class="line">*	@return</div><div class="line">*/</div><div class="line">- (BOOL)isIPv6Address:(NSString *)addr &#123;</div><div class="line">if (addr == nil) &#123;</div><div class="line">return NO;</div><div class="line">&#125;</div><div class="line">const char *utf8 = [addr UTF8String];</div><div class="line">// Check valid IPv6.</div><div class="line">struct in6_addr dst6;</div><div class="line">int success = inet_pton(AF_INET6, utf8, &amp;dst6);</div><div class="line">return (success == 1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>然后再进行下面的逻辑运算</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">dnsIPStack = IPLocalIPStack_IPv4 | IPLocalIPStack_IPv6;</div><div class="line">dnsIPStack &amp;= [self getDNSServersIpStack];</div><div class="line"></div><div class="line">if (dnsIPStack &amp; IPLocalIPStack_IPv4) &#123;</div><div class="line">// support IPv4</div><div class="line">isIPv6Only = NO;</div><div class="line">&#125; else if (dnsIPStack &amp; IPLocalIPStack_IPv6) &#123;</div><div class="line">// IPv6-Only</div><div class="line">isIPv6Only = YES;</div><div class="line">[[OSSIPv6PrefixResolver getInstance] updateIPv6Prefix];</div><div class="line">&#125; else &#123;</div><div class="line">KGIPv6Log(@&quot;[%s]: Error.&quot;, __FUNCTION__);</div><div class="line">isIPv6Only = NO;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>其中如果是ipv6我们就要做些事情了，不过先贴上完整代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">- (BOOL)isIPv6OnlyNetwork &#123;</div><div class="line">@synchronized(self) &#123;</div><div class="line">if (isIPv6OnlyResolved) &#123;</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line"></div><div class="line">struct in6_addr addr6_gateway = &#123;0&#125;;</div><div class="line">if (0 != getdefaultgateway6(&amp;addr6_gateway) || IN6_IS_ADDR_UNSPECIFIED(&amp;addr6_gateway)) &#123;</div><div class="line">isIPv6Only = NO;</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line"></div><div class="line">struct in_addr addr_gateway = &#123;0&#125;;</div><div class="line">if (0 != getdefaultgateway4(&amp;addr_gateway)) &#123;</div><div class="line">isIPv6Only = YES;</div><div class="line">[[OSSIPv6PrefixResolver getInstance] updateIPv6Prefix];</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line">if (INADDR_NONE == addr_gateway.s_addr</div><div class="line">|| INADDR_ANY == addr_gateway.s_addr ) &#123;</div><div class="line">isIPv6Only = YES;</div><div class="line">[[OSSIPv6PrefixResolver getInstance] updateIPv6Prefix];</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int haveIPv4 = _have_ipv4();</div><div class="line">int haveIPv6 = _have_ipv6();</div><div class="line">int local_stack = 0;</div><div class="line">if (haveIPv4) &#123; local_stack |= IPLocalIPStack_IPv4; &#125;</div><div class="line">if (haveIPv6) &#123; local_stack |= IPLocalIPStack_IPv6; &#125;</div><div class="line"></div><div class="line">if (IPLocalIPStack_IPv4 == local_stack) &#123;</div><div class="line">isIPv6Only = NO;</div><div class="line">return isIPv6Only;</div><div class="line">&#125; else if (IPLocalIPStack_IPv6 == local_stack) &#123;</div><div class="line">isIPv6Only = YES;</div><div class="line">[[OSSIPv6PrefixResolver getInstance] updateIPv6Prefix];</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line"></div><div class="line">KGIPv6Log(@&quot;Start resolved network to see if in IPv6-Only env.&quot;);</div><div class="line">int dnsIPStack = 0;</div><div class="line"></div><div class="line">dnsIPStack = IPLocalIPStack_IPv4 | IPLocalIPStack_IPv6;</div><div class="line">dnsIPStack &amp;= [self getDNSServersIpStack];</div><div class="line"></div><div class="line">if (dnsIPStack &amp; IPLocalIPStack_IPv4) &#123;</div><div class="line">// support IPv4</div><div class="line">isIPv6Only = NO;</div><div class="line">&#125; else if (dnsIPStack &amp; IPLocalIPStack_IPv6) &#123;</div><div class="line">// IPv6-Only</div><div class="line">isIPv6Only = YES;</div><div class="line">[[OSSIPv6PrefixResolver getInstance] updateIPv6Prefix];</div><div class="line">&#125; else &#123;</div><div class="line">KGIPv6Log(@&quot;[%s]: Error.&quot;, __FUNCTION__);</div><div class="line">isIPv6Only = NO;</div><div class="line">&#125;</div><div class="line">isIPv6OnlyResolved = YES;</div><div class="line">if (isIPv6Only) &#123;</div><div class="line">KGIPv6Log(@&quot;[%s]: IPv6-Only network now.&quot;, __FUNCTION__);</div><div class="line">&#125; else &#123;</div><div class="line">KGIPv6Log(@&quot;[%s]: Not IPv6-Only network now.&quot;, __FUNCTION__);</div><div class="line">&#125;</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>下面我们看一下是如何判断当前网络是否为ipv6only的</p>
+</li>
+<li><p>答案是查询本机DNS Servers协议</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">- (int)getDNSServersIpStack &#123;</div><div class="line">int dns_stack = 0;</div><div class="line">res_state res = malloc(sizeof(struct __res_state));</div><div class="line">int result = res_ninit(res);</div><div class="line">if (result == 0) &#123;</div><div class="line">union res_9_sockaddr_union *addr_union = malloc(res-&gt;nscount * sizeof(union res_9_sockaddr_union));</div><div class="line">res_getservers(res, addr_union, res-&gt;nscount);</div><div class="line">for (int i = 0; i &lt; res-&gt;nscount; i++) &#123;</div><div class="line">if (addr_union[i].sin.sin_family == AF_INET) &#123;</div><div class="line">char ip[INET_ADDRSTRLEN];</div><div class="line">if (inet_ntop(AF_INET, &amp;(addr_union[i].sin.sin_addr), ip, INET_ADDRSTRLEN)) &#123;</div><div class="line">dns_stack |= IPLocalIPStack_IPv4;</div><div class="line">&#125;</div><div class="line">&#125; else if (addr_union[i].sin6.sin6_family == AF_INET6) &#123;</div><div class="line">char ip[INET6_ADDRSTRLEN];</div><div class="line">if (inet_ntop(AF_INET6, &amp;(addr_union[i].sin6.sin6_addr), ip, INET6_ADDRSTRLEN)) &#123;</div><div class="line">dns_stack |= IPLocalIPStack_IPv6;</div><div class="line">&#125;</div><div class="line">&#125; else &#123;</div><div class="line">KGIPv6Log(@&quot;%s: Undefined family.&quot;, __FUNCTION__);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">res_nclose(res);</div><div class="line">return dns_stack;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>我们看看这个OSSIPv6PrefixResolver是如何解决ipv6问题的</p>
+</li>
+<li><p>直接就是下面的转换，不过还需要一个函数解决prefix的问题，代码下面附上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">if (([[KGIPv6Adapater sharedInstance] isIPv6OnlyNetwork]</div><div class="line">&amp;&amp; [[UIDevice currentDevice].systemVersion floatValue] &lt; 9.0)) &#123;</div><div class="line">NSURL *tempURL = [NSURL URLWithString:domainURLString];</div><div class="line">if ([[KGIPv6Adapater sharedInstance] isIPv4Address:tempURL.host]) &#123;</div><div class="line">NSString *tempIPv6String = [[KGIPv6Adapater sharedInstance] handleIpv4Address:tempURL.host];</div><div class="line">domainURLString = [domainURLString stringByReplacingOccurrencesOfString:tempURL.host</div><div class="line">withString:tempIPv6String];</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看当前是否只允许ipv6网络，是则将ipv4转换成ipv6</p>
+</li>
+<li><p>下面是转换算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">- (NSString *)convertIPv4toIPv6:(NSString *)ipv4 &#123;</div><div class="line">if ([ipv4 length] &lt;= 0) &#123;</div><div class="line">return nil;</div><div class="line">&#125;</div><div class="line"></div><div class="line">__uint8_t ipv6[16] = &#123;0x00&#125;;</div><div class="line">__uint8_t length = [self resolveIPv6Prefix:ipv6];</div><div class="line"></div><div class="line">if (length &lt;= 0) &#123;</div><div class="line">return nil;</div><div class="line">&#125;</div><div class="line"></div><div class="line">in_addr_t addr_v4 = inet_addr([ipv4 UTF8String]);</div><div class="line"></div><div class="line">// 按length的不同情况进行处理</div><div class="line">if (length==4 || length==12) &#123; //32 bits or 96 bits</div><div class="line">ipv6[length+0] |= (__uint8_t)(addr_v4&gt;&gt;0 &amp; 0xff);</div><div class="line">ipv6[length+1] |= (__uint8_t)(addr_v4&gt;&gt;8 &amp; 0xff);</div><div class="line">ipv6[length+2] |= (__uint8_t)(addr_v4&gt;&gt;16 &amp; 0xff);</div><div class="line">ipv6[length+3] |= (__uint8_t)(addr_v4&gt;&gt;24 &amp; 0xff);</div><div class="line">&#125;</div><div class="line">else if (length == 5) &#123; //40 bits  :a.b.c.0.d</div><div class="line">ipv6[length+0] |= (__uint8_t)(addr_v4&gt;&gt;0 &amp; 0xff);</div><div class="line">ipv6[length+1] |= (__uint8_t)(addr_v4&gt;&gt;8 &amp; 0xff);</div><div class="line">ipv6[length+2] |= (__uint8_t)(addr_v4&gt;&gt;16 &amp; 0xff);</div><div class="line">ipv6[length+4] |= (__uint8_t)(addr_v4&gt;&gt;24 &amp; 0xff);</div><div class="line">&#125;</div><div class="line">else if (length == 6) &#123; //48 bits   :a.b.0.c.d</div><div class="line">ipv6[length+0] |= (__uint8_t)(addr_v4&gt;&gt;0 &amp; 0xff);</div><div class="line">ipv6[length+1] |= (__uint8_t)(addr_v4&gt;&gt;8 &amp; 0xff);</div><div class="line">ipv6[length+3] |= (__uint8_t)(addr_v4&gt;&gt;16 &amp; 0xff);</div><div class="line">ipv6[length+4] |= (__uint8_t)(addr_v4&gt;&gt;24 &amp; 0xff);</div><div class="line">&#125;</div><div class="line">else if (length == 7) &#123; //56 bits   :a.0.b.c.d</div><div class="line">ipv6[length+0] |= (__uint8_t)(addr_v4&gt;&gt;0 &amp; 0xff);</div><div class="line">ipv6[length+2] |= (__uint8_t)(addr_v4&gt;&gt;8 &amp; 0xff);</div><div class="line">ipv6[length+3] |= (__uint8_t)(addr_v4&gt;&gt;16 &amp; 0xff);</div><div class="line">ipv6[length+4] |= (__uint8_t)(addr_v4&gt;&gt;24 &amp; 0xff);</div><div class="line">&#125;</div><div class="line">else if (length == 8) &#123; //64 bits   :0.a.b.c.d</div><div class="line">ipv6[length+1] |= (__uint8_t)(addr_v4&gt;&gt;0 &amp; 0xff);</div><div class="line">ipv6[length+2] |= (__uint8_t)(addr_v4&gt;&gt;8 &amp; 0xff);</div><div class="line">ipv6[length+3] |= (__uint8_t)(addr_v4&gt;&gt;16 &amp; 0xff);</div><div class="line">ipv6[length+4] |= (__uint8_t)(addr_v4&gt;&gt;24 &amp; 0xff);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 构造IPv6的结构</div><div class="line">char addr_text[ MAX(INET_ADDRSTRLEN, INET6_ADDRSTRLEN) ];</div><div class="line">if(inet_ntop(AF_INET6, ipv6, addr_text, INET6_ADDRSTRLEN)) &#123;</div><div class="line">NSString *ret = [NSString stringWithUTF8String:addr_text];</div><div class="line">return ret;</div><div class="line">&#125;</div><div class="line">return nil;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>解决ipv6prefix问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- (__uint8_t)resolveIPv6Prefix:(__uint8_t *)prefix &#123;</div><div class="line">if ( !prefix ) &#123;</div><div class="line">return 0;</div><div class="line">&#125;</div><div class="line">__uint8_t len = prefixLen;</div><div class="line">memcpy(prefix, ipv6Prefix, prefixLen);</div><div class="line">@synchronized(self) &#123;</div><div class="line">if (ipv6PrefixResolveStatus==IPv6PrefixUnResolved ) &#123;</div><div class="line">ipv6PrefixResolveStatus = IPv6PrefixResolving;</div><div class="line">dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^&#123;</div><div class="line">struct addrinfo hints, *addr;</div><div class="line">memset(&amp;hints, 0, sizeof(hints));</div><div class="line">hints.ai_family = PF_INET6;</div><div class="line">hints.ai_socktype = SOCK_STREAM;</div><div class="line">hints.ai_flags = AI_DEFAULT;</div><div class="line"></div><div class="line">if (0 != getaddrinfo(&quot;ipv4only.arpa&quot;, &quot;http&quot;, &amp;hints, &amp;addr)) &#123;</div><div class="line">ipv6PrefixResolveStatus = IPv6PrefixUnResolved;</div><div class="line">return;</div><div class="line">&#125;</div><div class="line"></div><div class="line">if (addr &amp;&amp; AF_INET6 == addr-&gt;ai_addr-&gt;sa_family) &#123;</div><div class="line">struct sockaddr_in6 *addr6 = (struct sockaddr_in6 *)(addr-&gt;ai_addr);</div><div class="line">if ( !addr6 ) &#123;</div><div class="line">ipv6PrefixResolveStatus = IPv6PrefixUnResolved;</div><div class="line">return;</div><div class="line">&#125;</div><div class="line"></div><div class="line">__uint8_t* u8 = addr6-&gt;sin6_addr.__u6_addr.__u6_addr8;</div><div class="line">for (__uint8_t i=0; i &lt; V6_PREFIX_TABLE_SIZE; i++) &#123;</div><div class="line">if ([self isIPv6Prefix:(__uint8_t *)V6_PREFIX_CONTENT_TABLE[i]</div><div class="line">withPrefixLen:V6_PREFIX_SIZE_TABLE[i]</div><div class="line">withIP:u8</div><div class="line">withIPLen:16]) &#123;</div><div class="line"></div><div class="line">ipv6Prefix = (__uint8_t *)V6_PREFIX_CONTENT_TABLE[i];</div><div class="line">prefixLen = V6_PREFIX_SIZE_TABLE[i];</div><div class="line">ipv6PrefixResolveStatus = IPv6PrefixResolved;</div><div class="line">break;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">ipv6PrefixResolveStatus = IPv6PrefixUnResolved;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">return len;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>ok，本期讲座到此结束</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/10/网络环境监听-Reachability/" data-id="ciqfvmdel0005kd0uzmlvvj47" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-二维码扫描、更新与创建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/17/二维码扫描、更新与创建/" class="article-date">
+  <time datetime="2015-10-16T16:53:38.000Z" itemprop="datePublished">2015-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/17/二维码扫描、更新与创建/">二维码扫描、更新与创建</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
 <li>二维码需要用到库<strong>AVFoundation</strong></li>
 <li><p>导入库完毕后，按照下面几个步骤来做</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/// 1.创建输入</span></div><div class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> inputDevice: <span class="type">AVCaptureDeviceInput</span>? =</div><div class="line">    &#123;</div><div class="line">       <span class="keyword">let</span> device = <span class="type">AVCaptureDevice</span>.defaultDeviceWithMediaType(<span class="type">AVMediaTypeVideo</span>)</div><div class="line">        <span class="keyword">do</span>&#123;</div><div class="line">            <span class="keyword">let</span> input = <span class="keyword">try</span> <span class="type">AVCaptureDeviceInput</span>(device: device)</div><div class="line">            <span class="keyword">return</span> input</div><div class="line">        &#125;<span class="keyword">catch</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">nil</span></div><div class="line">        &#125;</div><div class="line">    &#125;()</div><div class="line">    <span class="comment">/// 2.创建输出</span></div><div class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> output: <span class="type">AVCaptureMetadataOutput</span> = &#123;</div><div class="line">       <span class="keyword">let</span> output = <span class="type">AVCaptureMetadataOutput</span>()</div><div class="line">        <span class="keyword">return</span> output</div><div class="line">    &#125;()</div><div class="line">    <span class="comment">/// 3.创建会话</span></div><div class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> session: <span class="type">AVCaptureSession</span> = &#123;</div><div class="line">        <span class="keyword">let</span> s = <span class="type">AVCaptureSession</span>()</div><div class="line">        s.sessionPreset = <span class="string">"AVCaptureSessionPreset1920x1080"</span></div><div class="line">        <span class="keyword">return</span> s</div><div class="line">    &#125;()</div><div class="line">    <span class="comment">/// 4.创建预览图层</span></div><div class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> previewLayer: <span class="type">AVCaptureVideoPreviewLayer</span> = &#123;</div><div class="line">       <span class="keyword">let</span> layer = <span class="type">AVCaptureVideoPreviewLayer</span>(session: <span class="keyword">self</span>.session)</div><div class="line">        layer.frame = <span class="type">UIScreen</span>.mainScreen().bounds</div><div class="line">        <span class="keyword">return</span> layer</div><div class="line">    &#125;()</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">/// 1.创建输入</div><div class="line">    private lazy var inputDevice: AVCaptureDeviceInput? =</div><div class="line">    &#123;</div><div class="line">       let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)</div><div class="line">        do&#123;</div><div class="line">            let input = try AVCaptureDeviceInput(device: device)</div><div class="line">            return input</div><div class="line">        &#125;catch</div><div class="line">        &#123;</div><div class="line">            return nil</div><div class="line">        &#125;</div><div class="line">    &#125;()</div><div class="line">    /// 2.创建输出</div><div class="line">    private lazy var output: AVCaptureMetadataOutput = &#123;</div><div class="line">       let output = AVCaptureMetadataOutput()</div><div class="line">        return output</div><div class="line">    &#125;()</div><div class="line">    /// 3.创建会话</div><div class="line">    private lazy var session: AVCaptureSession = &#123;</div><div class="line">        let s = AVCaptureSession()</div><div class="line">        s.sessionPreset = &quot;AVCaptureSessionPreset1920x1080&quot;</div><div class="line">        return s</div><div class="line">    &#125;()</div><div class="line">    /// 4.创建预览图层</div><div class="line">    private lazy var previewLayer: AVCaptureVideoPreviewLayer = &#123;</div><div class="line">       let layer = AVCaptureVideoPreviewLayer(session: self.session)</div><div class="line">        layer.frame = UIScreen.mainScreen().bounds</div><div class="line">        return layer</div><div class="line">    &#125;()</div></pre></td></tr></table></figure>
 </li>
 <li><p>代理捕捉扫描信息</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">QRCodeViewController</span>: <span class="title">AVCaptureMetadataOutputObjectsDelegate</span></span></div><div class="line"></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">captureOutput</span><span class="params">(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="type">NJLog</span>(metadataObjects.last?.stringValue)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">extension QRCodeViewController: AVCaptureMetadataOutputObjectsDelegate</div><div class="line"></div><div class="line">&#123;</div><div class="line">    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)</div><div class="line">    &#123;</div><div class="line">        NJLog(metadataObjects.last?.stringValue)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>启动扫描</p>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">private func startScanQRCode()</div><div class="line">    &#123;</div><div class="line">        <span class="comment">// 1.判断是否可以添加输入设备</span></div><div class="line">        <span class="keyword">if</span> !session.canAddInput(inputDevice)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span></div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 2.判断是否可以添加输出对象</span></div><div class="line">        <span class="keyword">if</span> !session.canAddOutput(<span class="keyword">output</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span></div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 3.添加输入和输出到会话中</span></div><div class="line">        session.addInput(inputDevice)</div><div class="line">        session.addOutput(<span class="keyword">output</span>)</div><div class="line">        <span class="comment">// 4.设置输出解析数据类型</span></div><div class="line">        <span class="comment">// 必须在输出对象添加到会话之后才可以设置, 否则会报错</span></div><div class="line">        <span class="keyword">output</span>.metadataObjectTypes = <span class="keyword">output</span>.availableMetadataObjectTypes</div><div class="line">        <span class="comment">// 5.设置输出代理, 监听解析到得结果</span></div><div class="line">        <span class="keyword">output</span>.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())</div><div class="line">        </div><div class="line">        <span class="comment">// 6.添加预览图层</span></div><div class="line">        <span class="built_in">view</span>.layer.insertSublayer(previewLayer, atIndex: <span class="number">0</span>)</div><div class="line">		<span class="comment">// 将绘制边框图层添加到预览图层上        previewLayer.addSublayer(drawLayer)</span></div><div class="line">        <span class="comment">// 6.利用会话开始扫描</span></div><div class="line">        session.startRunning()</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">private func startScanQRCode()</div><div class="line">    &#123;</div><div class="line">        // 1.判断是否可以添加输入设备</div><div class="line">        if !session.canAddInput(inputDevice)</div><div class="line">        &#123;</div><div class="line">            return</div><div class="line">        &#125;</div><div class="line">        // 2.判断是否可以添加输出对象</div><div class="line">        if !session.canAddOutput(output)</div><div class="line">        &#123;</div><div class="line">            return</div><div class="line">        &#125;</div><div class="line">        // 3.添加输入和输出到会话中</div><div class="line">        session.addInput(inputDevice)</div><div class="line">        session.addOutput(output)</div><div class="line">        // 4.设置输出解析数据类型</div><div class="line">        // 必须在输出对象添加到会话之后才可以设置, 否则会报错</div><div class="line">        output.metadataObjectTypes = output.availableMetadataObjectTypes</div><div class="line">        // 5.设置输出代理, 监听解析到得结果</div><div class="line">        output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())</div><div class="line">        </div><div class="line">        // 6.添加预览图层</div><div class="line">        view.layer.insertSublayer(previewLayer, atIndex: 0)</div><div class="line">		// 将绘制边框图层添加到预览图层上        previewLayer.addSublayer(drawLayer)</div><div class="line">        // 6.利用会话开始扫描</div><div class="line">        session.startRunning()</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>设置感兴趣范围</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/// 2.创建输出</span></div><div class="line">    <span class="keyword">private</span> lazy var output: AVCaptureMetadataOutput = &#123;</div><div class="line">       let output = AVCaptureMetadataOutput()</div><div class="line">        <span class="comment">// 设置兴趣点(感兴趣范围), 默认是全屏</span></div><div class="line">        <span class="comment">// 注意: 是以横屏的左上角为参照</span></div><div class="line"><span class="comment">//        output.rectOfInterest = CGRect(x: 0, y: 0, width: 0.5, height: 0.5)</span></div><div class="line">        let frame = self.containerView.frame</div><div class="line">        let <span class="built_in">size</span> = self.view.frame.<span class="built_in">size</span></div><div class="line">        <span class="comment">// 由于是按照横屏来计算的, 所以需要将x变为y, y变为x, 将宽变为高, 高变为宽</span></div><div class="line">        output.rectOfInterest = CGRect(x: frame.origin.y / <span class="built_in">size</span>.<span class="built_in">height</span>, y: frame.origin.x / <span class="built_in">size</span>.<span class="built_in">width</span>, <span class="built_in">width</span>: frame.<span class="built_in">size</span>.<span class="built_in">height</span> / <span class="built_in">size</span>.<span class="built_in">height</span>, <span class="built_in">height</span>: frame.<span class="built_in">size</span>.<span class="built_in">width</span> / <span class="built_in">size</span>.<span class="built_in">width</span>)</div><div class="line">        </div><div class="line">        <span class="built_in">return</span> output</div><div class="line">    &#125;()</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">/// 2.创建输出</div><div class="line">    private lazy var output: AVCaptureMetadataOutput = &#123;</div><div class="line">       let output = AVCaptureMetadataOutput()</div><div class="line">        // 设置兴趣点(感兴趣范围), 默认是全屏</div><div class="line">        // 注意: 是以横屏的左上角为参照</div><div class="line">//        output.rectOfInterest = CGRect(x: 0, y: 0, width: 0.5, height: 0.5)</div><div class="line">        let frame = self.containerView.frame</div><div class="line">        let size = self.view.frame.size</div><div class="line">        // 由于是按照横屏来计算的, 所以需要将x变为y, y变为x, 将宽变为高, 高变为宽</div><div class="line">        output.rectOfInterest = CGRect(x: frame.origin.y / size.height, y: frame.origin.x / size.width, width: frame.size.height / size.height, height: frame.size.width / size.width)</div><div class="line">        </div><div class="line">        return output</div><div class="line">    &#125;()</div></pre></td></tr></table></figure>
 </li>
 <li><p>描绘边框</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">captureOutput</span><span class="params">(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 0. 移除以前的描边</span></div><div class="line">    clearCorners()</div><div class="line"></div><div class="line">    </div><div class="line">    <span class="keyword">for</span> objc <span class="keyword">in</span> metadataObjects</div><div class="line">    &#123;</div><div class="line">        <span class="comment">// 1.将扫描到二维码的坐标转换为我们能够识别的坐标</span></div><div class="line">       <span class="keyword">let</span> codeObjc =  previewLayer.transformedMetadataObjectForMetadataObject(objc <span class="keyword">as</span>! <span class="type">AVMetadataObject</span>)</div><div class="line"></div><div class="line">        <span class="comment">// 2.根据转换好的坐标绘制二维码描边</span></div><div class="line">        drawCorners(codeObjc <span class="keyword">as</span>! <span class="type">AVMetadataMachineReadableCodeObject</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">///绘制二维码描边</span></div><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">drawCorners</span><span class="params">(codeObjc: AVMetadataMachineReadableCodeObject)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> codeObjc.corners == <span class="literal">nil</span> || codeObjc.corners.<span class="built_in">count</span> == <span class="number">0</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// 1.绘制路径</span></div><div class="line">    <span class="keyword">let</span> subLayer = <span class="type">CAShapeLayer</span>()</div><div class="line">    subLayer.lineWidth = <span class="number">4</span></div><div class="line">    subLayer.strokeColor = <span class="type">UIColor</span>.redColor().<span class="type">CGColor</span></div><div class="line">    subLayer.fillColor = <span class="type">UIColor</span>.clearColor().<span class="type">CGColor</span></div><div class="line">    </div><div class="line">    <span class="comment">// 2.从传入对象中获取4个点, 创建Path</span></div><div class="line">    <span class="keyword">let</span> path = <span class="type">UIBezierPath</span>()</div><div class="line">    <span class="keyword">var</span> point = <span class="type">CGPointZero</span></div><div class="line">    <span class="keyword">var</span> index = <span class="number">0</span></div><div class="line">    <span class="keyword">let</span> dictArr = codeObjc.corners</div><div class="line">    <span class="comment">// 2.1取出第0个点</span></div><div class="line">    <span class="comment">// 将字典中的xy转换为CGPoint</span></div><div class="line">    <span class="type">CGPointMakeWithDictionaryRepresentation</span>(dictArr[index++] <span class="keyword">as</span>! <span class="type">CFDictionaryRef</span>, &amp;point)</div><div class="line">    <span class="comment">// 2.2移动到第0个点</span></div><div class="line">    path.moveToPoint(point)</div><div class="line">    </div><div class="line">    <span class="comment">// 2.3添加其它的点</span></div><div class="line">    <span class="keyword">while</span> index &lt; dictArr.<span class="built_in">count</span></div><div class="line">    &#123;</div><div class="line">        <span class="type">CGPointMakeWithDictionaryRepresentation</span>(dictArr[index++] <span class="keyword">as</span>! <span class="type">CFDictionaryRef</span>, &amp;point)</div><div class="line">        path.addLineToPoint(point)</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// 2.4关闭路径</span></div><div class="line">    path.closePath()</div><div class="line">    </div><div class="line">    subLayer.path = path.<span class="type">CGPath</span></div><div class="line">    </div><div class="line">    <span class="comment">// 3.将layer添加到drawLayer上</span></div><div class="line">    drawLayer.addSublayer(subLayer)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/// 移除以前的描边</span></div><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">clearCorners</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> drawLayer.sublayers == <span class="literal">nil</span> || drawLayer.sublayers?.<span class="built_in">count</span> == <span class="number">0</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> subLayer <span class="keyword">in</span> drawLayer.sublayers!</div><div class="line">    &#123;</div><div class="line">        subLayer.removeFromSuperlayer()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)</div><div class="line">&#123;</div><div class="line">    // 0. 移除以前的描边</div><div class="line">    clearCorners()</div><div class="line"></div><div class="line">    </div><div class="line">    for objc in metadataObjects</div><div class="line">    &#123;</div><div class="line">        // 1.将扫描到二维码的坐标转换为我们能够识别的坐标</div><div class="line">       let codeObjc =  previewLayer.transformedMetadataObjectForMetadataObject(objc as! AVMetadataObject)</div><div class="line"></div><div class="line">        // 2.根据转换好的坐标绘制二维码描边</div><div class="line">        drawCorners(codeObjc as! AVMetadataMachineReadableCodeObject)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">///绘制二维码描边</div><div class="line">private func drawCorners(codeObjc: AVMetadataMachineReadableCodeObject)</div><div class="line">&#123;</div><div class="line">    if codeObjc.corners == nil || codeObjc.corners.count == 0</div><div class="line">    &#123;</div><div class="line">        return</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    // 1.绘制路径</div><div class="line">    let subLayer = CAShapeLayer()</div><div class="line">    subLayer.lineWidth = 4</div><div class="line">    subLayer.strokeColor = UIColor.redColor().CGColor</div><div class="line">    subLayer.fillColor = UIColor.clearColor().CGColor</div><div class="line">    </div><div class="line">    // 2.从传入对象中获取4个点, 创建Path</div><div class="line">    let path = UIBezierPath()</div><div class="line">    var point = CGPointZero</div><div class="line">    var index = 0</div><div class="line">    let dictArr = codeObjc.corners</div><div class="line">    // 2.1取出第0个点</div><div class="line">    // 将字典中的xy转换为CGPoint</div><div class="line">    CGPointMakeWithDictionaryRepresentation(dictArr[index++] as! CFDictionaryRef, &amp;point)</div><div class="line">    // 2.2移动到第0个点</div><div class="line">    path.moveToPoint(point)</div><div class="line">    </div><div class="line">    // 2.3添加其它的点</div><div class="line">    while index &lt; dictArr.count</div><div class="line">    &#123;</div><div class="line">        CGPointMakeWithDictionaryRepresentation(dictArr[index++] as! CFDictionaryRef, &amp;point)</div><div class="line">        path.addLineToPoint(point)</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    // 2.4关闭路径</div><div class="line">    path.closePath()</div><div class="line">    </div><div class="line">    subLayer.path = path.CGPath</div><div class="line">    </div><div class="line">    // 3.将layer添加到drawLayer上</div><div class="line">    drawLayer.addSublayer(subLayer)</div><div class="line">&#125;</div><div class="line"></div><div class="line">/// 移除以前的描边</div><div class="line">private func clearCorners()</div><div class="line">&#123;</div><div class="line">    if drawLayer.sublayers == nil || drawLayer.sublayers?.count == 0</div><div class="line">    &#123;</div><div class="line">        return</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    for subLayer in drawLayer.sublayers!</div><div class="line">    &#123;</div><div class="line">        subLayer.removeFromSuperlayer()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="二维码创建"><a href="#二维码创建" class="headerlink" title="二维码创建"></a>二维码创建</h2><ul>
 <li><p>根据信息创建二维码</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.生成二维码</span></div><div class="line">       </div><div class="line">       <span class="comment">// 1.创建滤镜</span></div><div class="line">       let <span class="keyword">filter</span> = CIFilter(name: <span class="string">"CIQRCodeGenerator"</span>)!</div><div class="line">       <span class="comment">// 2.还原滤镜默认设置</span></div><div class="line">       <span class="keyword">filter</span>.setDefaults()</div><div class="line">       <span class="comment">// 3.设置数据</span></div><div class="line">       <span class="keyword">filter</span>.setValue(<span class="string">"极客江南"</span>.dataUsingEncoding(NSUTF8StringEncoding), forKey: <span class="string">"inputMessage"</span>)</div><div class="line">       <span class="comment">// 4.从滤镜从取出二维码</span></div><div class="line">       let ciImage = <span class="keyword">filter</span>.outputImage!</div><div class="line">       <span class="comment">//        customImageView.image = UIImage(CIImage: ciImage)</span></div><div class="line">       <span class="comment">//        customImageView.image = createNonInterpolatedUIImageFormCIImage(ciImage, size: 500)</span></div><div class="line">       let QRCodeImage = createNonInterpolatedUIImageFormCIImage(ciImage, <span class="keyword">size</span>: <span class="number">500</span>)</div><div class="line">       </div><div class="line">       </div><div class="line">       <span class="comment">// 5.设置图片到界面上</span></div><div class="line">       <span class="keyword">image</span>.<span class="keyword">image</span> = QRCodeImage</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// 1.生成二维码</div><div class="line">       </div><div class="line">       // 1.创建滤镜</div><div class="line">       let filter = CIFilter(name: &quot;CIQRCodeGenerator&quot;)!</div><div class="line">       // 2.还原滤镜默认设置</div><div class="line">       filter.setDefaults()</div><div class="line">       // 3.设置数据</div><div class="line">       filter.setValue(&quot;极客江南&quot;.dataUsingEncoding(NSUTF8StringEncoding), forKey: &quot;inputMessage&quot;)</div><div class="line">       // 4.从滤镜从取出二维码</div><div class="line">       let ciImage = filter.outputImage!</div><div class="line">       //        customImageView.image = UIImage(CIImage: ciImage)</div><div class="line">       //        customImageView.image = createNonInterpolatedUIImageFormCIImage(ciImage, size: 500)</div><div class="line">       let QRCodeImage = createNonInterpolatedUIImageFormCIImage(ciImage, size: 500)</div><div class="line">       </div><div class="line">       </div><div class="line">       // 5.设置图片到界面上</div><div class="line">       image.image = QRCodeImage</div></pre></td></tr></table></figure>
 </li>
 <li><p>生成高清放大的图像<br>```<br>/**<br>  根据CIImage生成指定大小的高清UIImage</p>
 <p>  :param: image 指定CIImage<br>  :param: size    指定大小<br>  :returns: 生成好的图片<br>  */<br>  private func createNonInterpolatedUIImageFormCIImage(image: CIImage, size: CGFloat) -&gt; UIImage {</p>
@@ -255,38 +477,25 @@ return UIImage(CGImage: scaledImage)
 
       
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/17/二维码扫描、更新与创建/" data-id="ciqfvmdeg0003kd0ukotqeitp" class="article-share-link">Share</a>
       
       
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
+    </footer>
   </div>
   
 </article>
 
 
-
-
-
-
-
   
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/10/16/hello-world/" class="article-date">
-  	<time datetime="2015-10-16T15:32:54.000Z" itemprop="datePublished">2015-10-16</time>
+  <div class="article-meta">
+    <a href="/2015/10/16/hello-world/" class="article-date">
+  <time datetime="2015-10-16T15:32:54.000Z" itemprop="datePublished">2015-10-16</time>
 </a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+  </div>
+  <div class="article-inner">
     
     
       <header class="article-header">
@@ -298,7 +507,6 @@ return UIImage(CGImage: scaledImage)
   
 
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -314,87 +522,98 @@ return UIImage(CGImage: scaledImage)
 
       
     </div>
-    
-    <div class="article-info article-info-index">
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/16/hello-world/" data-id="ciqfvmdea0001kd0u1tg7n8pu" class="article-share-link">Share</a>
       
       
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
+    </footer>
   </div>
   
 </article>
 
 
-
-
-
-
-
   
   
-</div>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/07/10/rumTime基础使用/">rumTime基础使用</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/多线程之NSOperation/">多线程之NSOperation</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/AFNet上传/">AFNet上传</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/网络环境监听-Reachability/">网络环境监听(Reachability)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/17/二维码扫描、更新与创建/">二维码扫描、更新与创建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
       <footer id="footer">
+  
   <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2016 Junsong
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+    <div id="footer-info" class="inner">
+      &copy; 2016 Junsong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
     </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
-</script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
-
-
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
+<script src="/js/script.js"></script>
 
   </div>
 </body>

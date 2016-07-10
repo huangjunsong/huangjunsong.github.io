@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>网络环境监听(Reachability) | Junsong’s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="没事看看这个网络环境监听的东西，待会还要去学英语呢
+我看的这个是属于ASI框架的
+大概看了一下，最核心的判断网络的方法是这个
+SCNetworkReachabilityGetFlags
+这个c函数获取到各种flag，它是系统SystemConfiguration框架里SCNetworkReachability.h里的一个方法
+看它的介绍
+123456789101112/*!@function S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络环境监听(Reachability)">
+<meta property="og:url" content="http://yoursite.com/2016/07/10/网络环境监听-Reachability/index.html">
+<meta property="og:site_name" content="Junsong’s Blog">
+<meta property="og:description" content="没事看看这个网络环境监听的东西，待会还要去学英语呢
+我看的这个是属于ASI框架的
+大概看了一下，最核心的判断网络的方法是这个
+SCNetworkReachabilityGetFlags
+这个c函数获取到各种flag，它是系统SystemConfiguration框架里SCNetworkReachability.h里的一个方法
+看它的介绍
+123456789101112/*!@function S">
+<meta property="og:updated_time" content="2016-07-10T00:22:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络环境监听(Reachability)">
+<meta name="twitter:description" content="没事看看这个网络环境监听的东西，待会还要去学英语呢
+我看的这个是属于ASI框架的
+大概看了一下，最核心的判断网络的方法是这个
+SCNetworkReachabilityGetFlags
+这个c函数获取到各种flag，它是系统SystemConfiguration框架里SCNetworkReachability.h里的一个方法
+看它的介绍
+123456789101112/*!@function S">
+  
+    <link rel="alternative" href="/atom.xml" title="Junsong’s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Junsong’s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-网络环境监听-Reachability" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/10/网络环境监听-Reachability/" class="article-date">
+  <time datetime="2016-07-10T00:19:23.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      网络环境监听(Reachability)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>没事看看这个网络环境监听的东西，待会还要去学英语呢</li>
+<li>我看的这个是属于ASI框架的</li>
+<li>大概看了一下，最核心的判断网络的方法是这个</li>
+<li>SCNetworkReachabilityGetFlags</li>
+<li>这个c函数获取到各种flag，它是系统SystemConfiguration框架里SCNetworkReachability.h里的一个方法</li>
+<li><p>看它的介绍</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">/*!</div><div class="line">@function SCNetworkReachabilityGetFlags</div><div class="line">@discussion Determines if the given target is reachable using the</div><div class="line">current network configuration.</div><div class="line">@param target The network reference associated with the address or name</div><div class="line">to be checked for reachability.</div><div class="line">@param flags A pointer to memory that will be filled with the</div><div class="line">SCNetworkReachabilityFlags detailing the reachability</div><div class="line">of the specified target.</div><div class="line">@result Returns TRUE if the network connection flags are valid;</div><div class="line">FALSE if the status could not be determined.</div><div class="line">*/</div></pre></td></tr></table></figure>
+</li>
+<li><p>大概意思就是根据传入的target（SCNetworkReachabilityRef）来得到当前网络状态</p>
+</li>
+<li><p>让我们看看得到的flag分别怎么处理</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">- (NetworkStatus)networkStatusNewForFlags:(<span class="built_in">SCNetworkReachabilityFlags</span>)flags</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsReachable) == <span class="number">0</span>)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="keyword">return</span> NotReachable;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">NetworkStatus retVal = NotReachable;</div><div class="line"></div><div class="line"><span class="keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsConnectionRequired) == <span class="number">0</span>)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="comment">// if target host is reachable and no connection is required</span></div><div class="line"></div><div class="line"><span class="comment">//  then we'll assume (for now) that your on Wi-Fi</span></div><div class="line"></div><div class="line">retVal = ReachableViaWiFi;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> ((((flags &amp; kSCNetworkReachabilityFlagsConnectionOnDemand ) != <span class="number">0</span>) ||</div><div class="line"></div><div class="line">(flags &amp; kSCNetworkReachabilityFlagsConnectionOnTraffic) != <span class="number">0</span>))</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="comment">// ... and the connection is on-demand (or on-traffic) if the</span></div><div class="line"></div><div class="line"><span class="comment">//     calling application is using the CFSocketStream or higher APIs</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsInterventionRequired) == <span class="number">0</span>)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="comment">// ... and no [user] intervention is needed</span></div><div class="line"></div><div class="line">retVal = ReachableViaWiFi;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN)</div><div class="line"></div><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="keyword">if</span> ([[[<span class="built_in">UIDevice</span> currentDevice] systemVersion] floatValue] &gt;= <span class="number">7.0</span>)</div><div class="line">&#123;</div><div class="line"><span class="built_in">CTTelephonyNetworkInfo</span> *info = [[<span class="built_in">CTTelephonyNetworkInfo</span> alloc] init];</div><div class="line"><span class="built_in">NSString</span> *currentRadioAccessTechnology = info.currentRadioAccessTechnology;</div><div class="line"><span class="keyword">if</span> (currentRadioAccessTechnology) &#123;</div><div class="line"><span class="keyword">if</span> ([currentRadioAccessTechnology isEqualToString:<span class="built_in">CTRadioAccessTechnologyLTE</span>]) &#123;</div><div class="line"><span class="keyword">return</span> kReachableVia4G;</div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> ([currentRadioAccessTechnology isEqualToString:<span class="built_in">CTRadioAccessTechnologyEdge</span>] || [currentRadioAccessTechnology isEqualToString:<span class="built_in">CTRadioAccessTechnologyGPRS</span>]) &#123;</div><div class="line"><span class="keyword">return</span> kReachableVia2G;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line"><span class="keyword">return</span> kReachableVia3G;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsTransientConnection) == kSCNetworkReachabilityFlagsTransientConnection) &#123;</div><div class="line"><span class="keyword">if</span>((flags &amp; kSCNetworkReachabilityFlagsConnectionRequired) == kSCNetworkReachabilityFlagsConnectionRequired) &#123;</div><div class="line"><span class="keyword">return</span> kReachableVia2G;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> kReachableVia3G;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> kReachableViaWWAN;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">return</span> retVal;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>上面这里将一个方法，一个生产flag的东西当做参数传了进去</p>
+</li>
+<li>很明显，利用runloop进行网络的环境监听</li>
+<li>当有变动时，则会调用ReachabilityCallback函数</li>
+<li><p>这个函数也是有讲究的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">/*!</div><div class="line">@typedef SCNetworkReachabilityCallBack</div><div class="line">@discussion Type of the callback function used when the</div><div class="line">reachability of a network address or name changes.</div><div class="line">@param target The SCNetworkReachability reference being monitored</div><div class="line">for changes.</div><div class="line">@param flags The new SCNetworkReachabilityFlags representing the</div><div class="line">reachability status of the network address/name.</div><div class="line">@param info A C pointer to a user-specified block of data.</div><div class="line">*/</div><div class="line">typedef void (*SCNetworkReachabilityCallBack)	(</div><div class="line">SCNetworkReachabilityRef			target,</div><div class="line">SCNetworkReachabilityFlags			flags,</div><div class="line">void			     *	__nullable	info</div><div class="line">);</div></pre></td></tr></table></figure>
+</li>
+<li><p>看它说明</p>
+<blockquote>
+<p>the callback function used when the reachability of a network address or name changes</p>
+</blockquote>
+</li>
+<li><p>为网络改变而生的回调，哈哈</p>
+</li>
+<li><p>再来看看这个设置callback的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">SCNetworkReachabilitySetCallback</div><div class="line"></div><div class="line">/////////////</div><div class="line">/*!</div><div class="line">@function SCNetworkReachabilitySetCallback</div><div class="line">@discussion Assigns a client to a target, which receives callbacks</div><div class="line">when the reachability of the target changes.</div><div class="line">@param target The network reference associated with the address or</div><div class="line">name to be checked for reachability.</div><div class="line">@param callout The function to be called when the reachability of the</div><div class="line">target changes.  If NULL, the current client for the target</div><div class="line">is removed.</div><div class="line">@param context The SCNetworkReachabilityContext associated with</div><div class="line">the callout.  The value may be NULL.</div><div class="line">@result Returns TRUE if the notification client was successfully set.</div><div class="line">*/</div><div class="line">Boolean</div><div class="line">SCNetworkReachabilitySetCallback		(</div><div class="line">SCNetworkReachabilityRef			target,</div><div class="line">SCNetworkReachabilityCallBack	__nullable	callout,</div><div class="line">SCNetworkReachabilityContext	* __nullable	context</div><div class="line">)				__OSX_AVAILABLE_STARTING(__MAC_10_3,__IPHONE_2_0);</div></pre></td></tr></table></figure>
+</li>
+<li><p>所以，你也可以自己写个网络环境监听，知道系统方法干啥的就行了</p>
+</li>
+<li><p>最后别忘了释放监听</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">- (void)stopNotifier</div><div class="line">&#123;</div><div class="line">if (_reachabilityRef != NULL)</div><div class="line">&#123;</div><div class="line">SCNetworkReachabilityUnscheduleFromRunLoop(_reachabilityRef, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>细看就可以大概了解这些flag是怎么运作的</p>
+</li>
+<li>接下来看看是如何做到实时的网络环境监听的<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">- (BOOL)startNotifier</div><div class="line">&#123;</div><div class="line">BOOL returnValue = NO;</div><div class="line">SCNetworkReachabilityContext context = &#123;0, (__bridge void *)(self), NULL, NULL, NULL&#125;;</div><div class="line"></div><div class="line">if (SCNetworkReachabilitySetCallback(_reachabilityRef, ReachabilityCallback, &amp;context))</div><div class="line">&#123;</div><div class="line">if (SCNetworkReachabilityScheduleWithRunLoop(_reachabilityRef, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode))</div><div class="line">&#123;</div><div class="line">returnValue = YES;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">return returnValue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li>这里附上一个监测ipv6的东西</li>
+<li><p>这里先贴上两个工具方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">*	@brief	判断是否为IPv4地址</div><div class="line">*</div><div class="line">*	@return</div><div class="line">*/</div><div class="line">- (BOOL)isIPv4Address:(NSString *)addr &#123;</div><div class="line"></div><div class="line">if (addr == nil) &#123;</div><div class="line">return NO;</div><div class="line">&#125;</div><div class="line">const char *utf8 = [addr UTF8String];</div><div class="line">// Check valid IPv4.</div><div class="line">struct in_addr dst;</div><div class="line">int success = inet_pton(AF_INET, utf8, &amp;(dst.s_addr));</div><div class="line">return success == 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line">*	@brief	判断是否为IPv6地址</div><div class="line">*</div><div class="line">*	@return</div><div class="line">*/</div><div class="line">- (BOOL)isIPv6Address:(NSString *)addr &#123;</div><div class="line">if (addr == nil) &#123;</div><div class="line">return NO;</div><div class="line">&#125;</div><div class="line">const char *utf8 = [addr UTF8String];</div><div class="line">// Check valid IPv6.</div><div class="line">struct in6_addr dst6;</div><div class="line">int success = inet_pton(AF_INET6, utf8, &amp;dst6);</div><div class="line">return (success == 1);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>然后再进行下面的逻辑运算</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">dnsIPStack = IPLocalIPStack_IPv4 | IPLocalIPStack_IPv6;</div><div class="line">dnsIPStack &amp;= [self getDNSServersIpStack];</div><div class="line"></div><div class="line">if (dnsIPStack &amp; IPLocalIPStack_IPv4) &#123;</div><div class="line">// support IPv4</div><div class="line">isIPv6Only = NO;</div><div class="line">&#125; else if (dnsIPStack &amp; IPLocalIPStack_IPv6) &#123;</div><div class="line">// IPv6-Only</div><div class="line">isIPv6Only = YES;</div><div class="line">[[OSSIPv6PrefixResolver getInstance] updateIPv6Prefix];</div><div class="line">&#125; else &#123;</div><div class="line">KGIPv6Log(@&quot;[%s]: Error.&quot;, __FUNCTION__);</div><div class="line">isIPv6Only = NO;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>其中如果是ipv6我们就要做些事情了，不过先贴上完整代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">- (BOOL)isIPv6OnlyNetwork &#123;</div><div class="line">@synchronized(self) &#123;</div><div class="line">if (isIPv6OnlyResolved) &#123;</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line"></div><div class="line">struct in6_addr addr6_gateway = &#123;0&#125;;</div><div class="line">if (0 != getdefaultgateway6(&amp;addr6_gateway) || IN6_IS_ADDR_UNSPECIFIED(&amp;addr6_gateway)) &#123;</div><div class="line">isIPv6Only = NO;</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line"></div><div class="line">struct in_addr addr_gateway = &#123;0&#125;;</div><div class="line">if (0 != getdefaultgateway4(&amp;addr_gateway)) &#123;</div><div class="line">isIPv6Only = YES;</div><div class="line">[[OSSIPv6PrefixResolver getInstance] updateIPv6Prefix];</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line">if (INADDR_NONE == addr_gateway.s_addr</div><div class="line">|| INADDR_ANY == addr_gateway.s_addr ) &#123;</div><div class="line">isIPv6Only = YES;</div><div class="line">[[OSSIPv6PrefixResolver getInstance] updateIPv6Prefix];</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int haveIPv4 = _have_ipv4();</div><div class="line">int haveIPv6 = _have_ipv6();</div><div class="line">int local_stack = 0;</div><div class="line">if (haveIPv4) &#123; local_stack |= IPLocalIPStack_IPv4; &#125;</div><div class="line">if (haveIPv6) &#123; local_stack |= IPLocalIPStack_IPv6; &#125;</div><div class="line"></div><div class="line">if (IPLocalIPStack_IPv4 == local_stack) &#123;</div><div class="line">isIPv6Only = NO;</div><div class="line">return isIPv6Only;</div><div class="line">&#125; else if (IPLocalIPStack_IPv6 == local_stack) &#123;</div><div class="line">isIPv6Only = YES;</div><div class="line">[[OSSIPv6PrefixResolver getInstance] updateIPv6Prefix];</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line"></div><div class="line">KGIPv6Log(@&quot;Start resolved network to see if in IPv6-Only env.&quot;);</div><div class="line">int dnsIPStack = 0;</div><div class="line"></div><div class="line">dnsIPStack = IPLocalIPStack_IPv4 | IPLocalIPStack_IPv6;</div><div class="line">dnsIPStack &amp;= [self getDNSServersIpStack];</div><div class="line"></div><div class="line">if (dnsIPStack &amp; IPLocalIPStack_IPv4) &#123;</div><div class="line">// support IPv4</div><div class="line">isIPv6Only = NO;</div><div class="line">&#125; else if (dnsIPStack &amp; IPLocalIPStack_IPv6) &#123;</div><div class="line">// IPv6-Only</div><div class="line">isIPv6Only = YES;</div><div class="line">[[OSSIPv6PrefixResolver getInstance] updateIPv6Prefix];</div><div class="line">&#125; else &#123;</div><div class="line">KGIPv6Log(@&quot;[%s]: Error.&quot;, __FUNCTION__);</div><div class="line">isIPv6Only = NO;</div><div class="line">&#125;</div><div class="line">isIPv6OnlyResolved = YES;</div><div class="line">if (isIPv6Only) &#123;</div><div class="line">KGIPv6Log(@&quot;[%s]: IPv6-Only network now.&quot;, __FUNCTION__);</div><div class="line">&#125; else &#123;</div><div class="line">KGIPv6Log(@&quot;[%s]: Not IPv6-Only network now.&quot;, __FUNCTION__);</div><div class="line">&#125;</div><div class="line">return isIPv6Only;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>下面我们看一下是如何判断当前网络是否为ipv6only的</p>
+</li>
+<li><p>答案是查询本机DNS Servers协议</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">- (int)getDNSServersIpStack &#123;</div><div class="line">int dns_stack = 0;</div><div class="line">res_state res = malloc(sizeof(struct __res_state));</div><div class="line">int result = res_ninit(res);</div><div class="line">if (result == 0) &#123;</div><div class="line">union res_9_sockaddr_union *addr_union = malloc(res-&gt;nscount * sizeof(union res_9_sockaddr_union));</div><div class="line">res_getservers(res, addr_union, res-&gt;nscount);</div><div class="line">for (int i = 0; i &lt; res-&gt;nscount; i++) &#123;</div><div class="line">if (addr_union[i].sin.sin_family == AF_INET) &#123;</div><div class="line">char ip[INET_ADDRSTRLEN];</div><div class="line">if (inet_ntop(AF_INET, &amp;(addr_union[i].sin.sin_addr), ip, INET_ADDRSTRLEN)) &#123;</div><div class="line">dns_stack |= IPLocalIPStack_IPv4;</div><div class="line">&#125;</div><div class="line">&#125; else if (addr_union[i].sin6.sin6_family == AF_INET6) &#123;</div><div class="line">char ip[INET6_ADDRSTRLEN];</div><div class="line">if (inet_ntop(AF_INET6, &amp;(addr_union[i].sin6.sin6_addr), ip, INET6_ADDRSTRLEN)) &#123;</div><div class="line">dns_stack |= IPLocalIPStack_IPv6;</div><div class="line">&#125;</div><div class="line">&#125; else &#123;</div><div class="line">KGIPv6Log(@&quot;%s: Undefined family.&quot;, __FUNCTION__);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">res_nclose(res);</div><div class="line">return dns_stack;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>我们看看这个OSSIPv6PrefixResolver是如何解决ipv6问题的</p>
+</li>
+<li><p>直接就是下面的转换，不过还需要一个函数解决prefix的问题，代码下面附上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">if (([[KGIPv6Adapater sharedInstance] isIPv6OnlyNetwork]</div><div class="line">&amp;&amp; [[UIDevice currentDevice].systemVersion floatValue] &lt; 9.0)) &#123;</div><div class="line">NSURL *tempURL = [NSURL URLWithString:domainURLString];</div><div class="line">if ([[KGIPv6Adapater sharedInstance] isIPv4Address:tempURL.host]) &#123;</div><div class="line">NSString *tempIPv6String = [[KGIPv6Adapater sharedInstance] handleIpv4Address:tempURL.host];</div><div class="line">domainURLString = [domainURLString stringByReplacingOccurrencesOfString:tempURL.host</div><div class="line">withString:tempIPv6String];</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>查看当前是否只允许ipv6网络，是则将ipv4转换成ipv6</p>
+</li>
+<li><p>下面是转换算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">- (NSString *)convertIPv4toIPv6:(NSString *)ipv4 &#123;</div><div class="line">if ([ipv4 length] &lt;= 0) &#123;</div><div class="line">return nil;</div><div class="line">&#125;</div><div class="line"></div><div class="line">__uint8_t ipv6[16] = &#123;0x00&#125;;</div><div class="line">__uint8_t length = [self resolveIPv6Prefix:ipv6];</div><div class="line"></div><div class="line">if (length &lt;= 0) &#123;</div><div class="line">return nil;</div><div class="line">&#125;</div><div class="line"></div><div class="line">in_addr_t addr_v4 = inet_addr([ipv4 UTF8String]);</div><div class="line"></div><div class="line">// 按length的不同情况进行处理</div><div class="line">if (length==4 || length==12) &#123; //32 bits or 96 bits</div><div class="line">ipv6[length+0] |= (__uint8_t)(addr_v4&gt;&gt;0 &amp; 0xff);</div><div class="line">ipv6[length+1] |= (__uint8_t)(addr_v4&gt;&gt;8 &amp; 0xff);</div><div class="line">ipv6[length+2] |= (__uint8_t)(addr_v4&gt;&gt;16 &amp; 0xff);</div><div class="line">ipv6[length+3] |= (__uint8_t)(addr_v4&gt;&gt;24 &amp; 0xff);</div><div class="line">&#125;</div><div class="line">else if (length == 5) &#123; //40 bits  :a.b.c.0.d</div><div class="line">ipv6[length+0] |= (__uint8_t)(addr_v4&gt;&gt;0 &amp; 0xff);</div><div class="line">ipv6[length+1] |= (__uint8_t)(addr_v4&gt;&gt;8 &amp; 0xff);</div><div class="line">ipv6[length+2] |= (__uint8_t)(addr_v4&gt;&gt;16 &amp; 0xff);</div><div class="line">ipv6[length+4] |= (__uint8_t)(addr_v4&gt;&gt;24 &amp; 0xff);</div><div class="line">&#125;</div><div class="line">else if (length == 6) &#123; //48 bits   :a.b.0.c.d</div><div class="line">ipv6[length+0] |= (__uint8_t)(addr_v4&gt;&gt;0 &amp; 0xff);</div><div class="line">ipv6[length+1] |= (__uint8_t)(addr_v4&gt;&gt;8 &amp; 0xff);</div><div class="line">ipv6[length+3] |= (__uint8_t)(addr_v4&gt;&gt;16 &amp; 0xff);</div><div class="line">ipv6[length+4] |= (__uint8_t)(addr_v4&gt;&gt;24 &amp; 0xff);</div><div class="line">&#125;</div><div class="line">else if (length == 7) &#123; //56 bits   :a.0.b.c.d</div><div class="line">ipv6[length+0] |= (__uint8_t)(addr_v4&gt;&gt;0 &amp; 0xff);</div><div class="line">ipv6[length+2] |= (__uint8_t)(addr_v4&gt;&gt;8 &amp; 0xff);</div><div class="line">ipv6[length+3] |= (__uint8_t)(addr_v4&gt;&gt;16 &amp; 0xff);</div><div class="line">ipv6[length+4] |= (__uint8_t)(addr_v4&gt;&gt;24 &amp; 0xff);</div><div class="line">&#125;</div><div class="line">else if (length == 8) &#123; //64 bits   :0.a.b.c.d</div><div class="line">ipv6[length+1] |= (__uint8_t)(addr_v4&gt;&gt;0 &amp; 0xff);</div><div class="line">ipv6[length+2] |= (__uint8_t)(addr_v4&gt;&gt;8 &amp; 0xff);</div><div class="line">ipv6[length+3] |= (__uint8_t)(addr_v4&gt;&gt;16 &amp; 0xff);</div><div class="line">ipv6[length+4] |= (__uint8_t)(addr_v4&gt;&gt;24 &amp; 0xff);</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 构造IPv6的结构</div><div class="line">char addr_text[ MAX(INET_ADDRSTRLEN, INET6_ADDRSTRLEN) ];</div><div class="line">if(inet_ntop(AF_INET6, ipv6, addr_text, INET6_ADDRSTRLEN)) &#123;</div><div class="line">NSString *ret = [NSString stringWithUTF8String:addr_text];</div><div class="line">return ret;</div><div class="line">&#125;</div><div class="line">return nil;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>解决ipv6prefix问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- (__uint8_t)resolveIPv6Prefix:(__uint8_t *)prefix &#123;</div><div class="line">if ( !prefix ) &#123;</div><div class="line">return 0;</div><div class="line">&#125;</div><div class="line">__uint8_t len = prefixLen;</div><div class="line">memcpy(prefix, ipv6Prefix, prefixLen);</div><div class="line">@synchronized(self) &#123;</div><div class="line">if (ipv6PrefixResolveStatus==IPv6PrefixUnResolved ) &#123;</div><div class="line">ipv6PrefixResolveStatus = IPv6PrefixResolving;</div><div class="line">dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^&#123;</div><div class="line">struct addrinfo hints, *addr;</div><div class="line">memset(&amp;hints, 0, sizeof(hints));</div><div class="line">hints.ai_family = PF_INET6;</div><div class="line">hints.ai_socktype = SOCK_STREAM;</div><div class="line">hints.ai_flags = AI_DEFAULT;</div><div class="line"></div><div class="line">if (0 != getaddrinfo(&quot;ipv4only.arpa&quot;, &quot;http&quot;, &amp;hints, &amp;addr)) &#123;</div><div class="line">ipv6PrefixResolveStatus = IPv6PrefixUnResolved;</div><div class="line">return;</div><div class="line">&#125;</div><div class="line"></div><div class="line">if (addr &amp;&amp; AF_INET6 == addr-&gt;ai_addr-&gt;sa_family) &#123;</div><div class="line">struct sockaddr_in6 *addr6 = (struct sockaddr_in6 *)(addr-&gt;ai_addr);</div><div class="line">if ( !addr6 ) &#123;</div><div class="line">ipv6PrefixResolveStatus = IPv6PrefixUnResolved;</div><div class="line">return;</div><div class="line">&#125;</div><div class="line"></div><div class="line">__uint8_t* u8 = addr6-&gt;sin6_addr.__u6_addr.__u6_addr8;</div><div class="line">for (__uint8_t i=0; i &lt; V6_PREFIX_TABLE_SIZE; i++) &#123;</div><div class="line">if ([self isIPv6Prefix:(__uint8_t *)V6_PREFIX_CONTENT_TABLE[i]</div><div class="line">withPrefixLen:V6_PREFIX_SIZE_TABLE[i]</div><div class="line">withIP:u8</div><div class="line">withIPLen:16]) &#123;</div><div class="line"></div><div class="line">ipv6Prefix = (__uint8_t *)V6_PREFIX_CONTENT_TABLE[i];</div><div class="line">prefixLen = V6_PREFIX_SIZE_TABLE[i];</div><div class="line">ipv6PrefixResolveStatus = IPv6PrefixResolved;</div><div class="line">break;</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">ipv6PrefixResolveStatus = IPv6PrefixUnResolved;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&#125;);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">return len;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>ok，本期讲座到此结束</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/10/网络环境监听-Reachability/" data-id="ciqfvmdel0005kd0uzmlvvj47" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/10/AFNet上传/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          AFNet上传
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/17/二维码扫描、更新与创建/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">二维码扫描、更新与创建</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/07/10/rumTime基础使用/">rumTime基础使用</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/多线程之NSOperation/">多线程之NSOperation</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/AFNet上传/">AFNet上传</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/网络环境监听-Reachability/">网络环境监听(Reachability)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/17/二维码扫描、更新与创建/">二维码扫描、更新与创建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Junsong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

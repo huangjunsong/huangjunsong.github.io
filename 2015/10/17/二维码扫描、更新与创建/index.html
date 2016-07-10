@@ -3,239 +3,112 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Junsong’s Blog</title>
+  <title>二维码扫描、更新与创建 | Junsong’s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="二维码扫描、更新与创建
-二维码需要用到库AVFoundation
+  <meta name="description" content="二维码需要用到库AVFoundation
 导入库完毕后，按照下面几个步骤来做
-1234567891011121314151617181920212223242526272829/// 1.创建输入    private lazy var inputDevice: AVCaptureDeviceInput? =    &amp;#123;       let device = AVC">
+1234567891011121314151617181920212223242526272829/// 1.创建输入    private lazy var inputDevice: AVCaptureDeviceInput? =    &amp;#123;       let device = AVCaptureDevic">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Junsong’s Blog">
+<meta property="og:title" content="二维码扫描、更新与创建">
 <meta property="og:url" content="http://yoursite.com/2015/10/17/二维码扫描、更新与创建/index.html">
 <meta property="og:site_name" content="Junsong’s Blog">
-<meta property="og:description" content="二维码扫描、更新与创建
-二维码需要用到库AVFoundation
+<meta property="og:description" content="二维码需要用到库AVFoundation
 导入库完毕后，按照下面几个步骤来做
-1234567891011121314151617181920212223242526272829/// 1.创建输入    private lazy var inputDevice: AVCaptureDeviceInput? =    &amp;#123;       let device = AVC">
-<meta property="og:updated_time" content="2015-10-16T16:53:38.000Z">
+1234567891011121314151617181920212223242526272829/// 1.创建输入    private lazy var inputDevice: AVCaptureDeviceInput? =    &amp;#123;       let device = AVCaptureDevic">
+<meta property="og:updated_time" content="2016-07-10T00:22:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Junsong’s Blog">
-<meta name="twitter:description" content="二维码扫描、更新与创建
-二维码需要用到库AVFoundation
+<meta name="twitter:title" content="二维码扫描、更新与创建">
+<meta name="twitter:description" content="二维码需要用到库AVFoundation
 导入库完毕后，按照下面几个步骤来做
-1234567891011121314151617181920212223242526272829/// 1.创建输入    private lazy var inputDevice: AVCaptureDeviceInput? =    &amp;#123;       let device = AVC">
+1234567891011121314151617181920212223242526272829/// 1.创建输入    private lazy var inputDevice: AVCaptureDeviceInput? =    &amp;#123;       let device = AVCaptureDevic">
   
     <link rel="alternative" href="/atom.xml" title="Junsong’s Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/style.css">
+  
+
 </head>
 <body>
   <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="http://ww4.sinaimg.cn/large/74311666jw1exc4fqfaxbj20e60ifac0.jpg" class="js-avatar">
-			
-		</a>
-
-		<hgroup>
-		  <h1 class="header-author"><a href="/">Junsong</a></h1>
-		</hgroup>
-
-		
-
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>菜单</li>
-						<li>标签</li>
-						
-						<li>友情链接</li>
-						
-						
-						<li>关于我</li>
-						
-					</ul>
-				</div>
-			</div>
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="#" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-					        
-								<a class="rss" target="_blank" href="#" title="rss">rss</a>
-					        
-								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
-			        
-			        </div>
-				</section>
-				
-
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">I want to be stronger!</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
-</div>
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Junsong’s Blog</a>
+      </h1>
+      
     </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">Junsong</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="http://ww4.sinaimg.cn/large/74311666jw1exc4fqfaxbj20e60ifac0.jpg" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author">Junsong</h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="#" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss">rss</a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-      <div class="body-wrap"><article id="post-二维码扫描、更新与创建" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/10/17/二维码扫描、更新与创建/" class="article-date">
-  	<time datetime="2015-10-16T16:53:38.000Z" itemprop="datePublished">2015-10-17</time>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-二维码扫描、更新与创建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/17/二维码扫描、更新与创建/" class="article-date">
+  <time datetime="2015-10-16T16:53:38.000Z" itemprop="datePublished">2015-10-17</time>
 </a>
-    </div>
-  
+    
+  </div>
   <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      二维码扫描、更新与创建
+    </h1>
+  
+
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="二维码扫描、更新与创建"><a href="#二维码扫描、更新与创建" class="headerlink" title="二维码扫描、更新与创建"></a>二维码扫描、更新与创建</h1><ul>
+        <ul>
 <li>二维码需要用到库<strong>AVFoundation</strong></li>
 <li><p>导入库完毕后，按照下面几个步骤来做</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/// 1.创建输入</span></div><div class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> inputDevice: <span class="type">AVCaptureDeviceInput</span>? =</div><div class="line">    &#123;</div><div class="line">       <span class="keyword">let</span> device = <span class="type">AVCaptureDevice</span>.defaultDeviceWithMediaType(<span class="type">AVMediaTypeVideo</span>)</div><div class="line">        <span class="keyword">do</span>&#123;</div><div class="line">            <span class="keyword">let</span> input = <span class="keyword">try</span> <span class="type">AVCaptureDeviceInput</span>(device: device)</div><div class="line">            <span class="keyword">return</span> input</div><div class="line">        &#125;<span class="keyword">catch</span></div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">nil</span></div><div class="line">        &#125;</div><div class="line">    &#125;()</div><div class="line">    <span class="comment">/// 2.创建输出</span></div><div class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> output: <span class="type">AVCaptureMetadataOutput</span> = &#123;</div><div class="line">       <span class="keyword">let</span> output = <span class="type">AVCaptureMetadataOutput</span>()</div><div class="line">        <span class="keyword">return</span> output</div><div class="line">    &#125;()</div><div class="line">    <span class="comment">/// 3.创建会话</span></div><div class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> session: <span class="type">AVCaptureSession</span> = &#123;</div><div class="line">        <span class="keyword">let</span> s = <span class="type">AVCaptureSession</span>()</div><div class="line">        s.sessionPreset = <span class="string">"AVCaptureSessionPreset1920x1080"</span></div><div class="line">        <span class="keyword">return</span> s</div><div class="line">    &#125;()</div><div class="line">    <span class="comment">/// 4.创建预览图层</span></div><div class="line">    <span class="keyword">private</span> <span class="built_in">lazy</span> <span class="keyword">var</span> previewLayer: <span class="type">AVCaptureVideoPreviewLayer</span> = &#123;</div><div class="line">       <span class="keyword">let</span> layer = <span class="type">AVCaptureVideoPreviewLayer</span>(session: <span class="keyword">self</span>.session)</div><div class="line">        layer.frame = <span class="type">UIScreen</span>.mainScreen().bounds</div><div class="line">        <span class="keyword">return</span> layer</div><div class="line">    &#125;()</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">/// 1.创建输入</div><div class="line">    private lazy var inputDevice: AVCaptureDeviceInput? =</div><div class="line">    &#123;</div><div class="line">       let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)</div><div class="line">        do&#123;</div><div class="line">            let input = try AVCaptureDeviceInput(device: device)</div><div class="line">            return input</div><div class="line">        &#125;catch</div><div class="line">        &#123;</div><div class="line">            return nil</div><div class="line">        &#125;</div><div class="line">    &#125;()</div><div class="line">    /// 2.创建输出</div><div class="line">    private lazy var output: AVCaptureMetadataOutput = &#123;</div><div class="line">       let output = AVCaptureMetadataOutput()</div><div class="line">        return output</div><div class="line">    &#125;()</div><div class="line">    /// 3.创建会话</div><div class="line">    private lazy var session: AVCaptureSession = &#123;</div><div class="line">        let s = AVCaptureSession()</div><div class="line">        s.sessionPreset = &quot;AVCaptureSessionPreset1920x1080&quot;</div><div class="line">        return s</div><div class="line">    &#125;()</div><div class="line">    /// 4.创建预览图层</div><div class="line">    private lazy var previewLayer: AVCaptureVideoPreviewLayer = &#123;</div><div class="line">       let layer = AVCaptureVideoPreviewLayer(session: self.session)</div><div class="line">        layer.frame = UIScreen.mainScreen().bounds</div><div class="line">        return layer</div><div class="line">    &#125;()</div></pre></td></tr></table></figure>
 </li>
 <li><p>代理捕捉扫描信息</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">extension</span> <span class="title">QRCodeViewController</span>: <span class="title">AVCaptureMetadataOutputObjectsDelegate</span></span></div><div class="line"></div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">captureOutput</span><span class="params">(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="type">NJLog</span>(metadataObjects.last?.stringValue)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">extension QRCodeViewController: AVCaptureMetadataOutputObjectsDelegate</div><div class="line"></div><div class="line">&#123;</div><div class="line">    func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)</div><div class="line">    &#123;</div><div class="line">        NJLog(metadataObjects.last?.stringValue)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>启动扫描</p>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">private func startScanQRCode()</div><div class="line">    &#123;</div><div class="line">        <span class="comment">// 1.判断是否可以添加输入设备</span></div><div class="line">        <span class="keyword">if</span> !session.canAddInput(inputDevice)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span></div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 2.判断是否可以添加输出对象</span></div><div class="line">        <span class="keyword">if</span> !session.canAddOutput(<span class="keyword">output</span>)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">return</span></div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 3.添加输入和输出到会话中</span></div><div class="line">        session.addInput(inputDevice)</div><div class="line">        session.addOutput(<span class="keyword">output</span>)</div><div class="line">        <span class="comment">// 4.设置输出解析数据类型</span></div><div class="line">        <span class="comment">// 必须在输出对象添加到会话之后才可以设置, 否则会报错</span></div><div class="line">        <span class="keyword">output</span>.metadataObjectTypes = <span class="keyword">output</span>.availableMetadataObjectTypes</div><div class="line">        <span class="comment">// 5.设置输出代理, 监听解析到得结果</span></div><div class="line">        <span class="keyword">output</span>.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())</div><div class="line">        </div><div class="line">        <span class="comment">// 6.添加预览图层</span></div><div class="line">        <span class="built_in">view</span>.layer.insertSublayer(previewLayer, atIndex: <span class="number">0</span>)</div><div class="line">		<span class="comment">// 将绘制边框图层添加到预览图层上        previewLayer.addSublayer(drawLayer)</span></div><div class="line">        <span class="comment">// 6.利用会话开始扫描</span></div><div class="line">        session.startRunning()</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">private func startScanQRCode()</div><div class="line">    &#123;</div><div class="line">        // 1.判断是否可以添加输入设备</div><div class="line">        if !session.canAddInput(inputDevice)</div><div class="line">        &#123;</div><div class="line">            return</div><div class="line">        &#125;</div><div class="line">        // 2.判断是否可以添加输出对象</div><div class="line">        if !session.canAddOutput(output)</div><div class="line">        &#123;</div><div class="line">            return</div><div class="line">        &#125;</div><div class="line">        // 3.添加输入和输出到会话中</div><div class="line">        session.addInput(inputDevice)</div><div class="line">        session.addOutput(output)</div><div class="line">        // 4.设置输出解析数据类型</div><div class="line">        // 必须在输出对象添加到会话之后才可以设置, 否则会报错</div><div class="line">        output.metadataObjectTypes = output.availableMetadataObjectTypes</div><div class="line">        // 5.设置输出代理, 监听解析到得结果</div><div class="line">        output.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())</div><div class="line">        </div><div class="line">        // 6.添加预览图层</div><div class="line">        view.layer.insertSublayer(previewLayer, atIndex: 0)</div><div class="line">		// 将绘制边框图层添加到预览图层上        previewLayer.addSublayer(drawLayer)</div><div class="line">        // 6.利用会话开始扫描</div><div class="line">        session.startRunning()</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>设置感兴趣范围</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/// 2.创建输出</span></div><div class="line">    <span class="keyword">private</span> lazy var output: AVCaptureMetadataOutput = &#123;</div><div class="line">       let output = AVCaptureMetadataOutput()</div><div class="line">        <span class="comment">// 设置兴趣点(感兴趣范围), 默认是全屏</span></div><div class="line">        <span class="comment">// 注意: 是以横屏的左上角为参照</span></div><div class="line"><span class="comment">//        output.rectOfInterest = CGRect(x: 0, y: 0, width: 0.5, height: 0.5)</span></div><div class="line">        let frame = self.containerView.frame</div><div class="line">        let <span class="built_in">size</span> = self.view.frame.<span class="built_in">size</span></div><div class="line">        <span class="comment">// 由于是按照横屏来计算的, 所以需要将x变为y, y变为x, 将宽变为高, 高变为宽</span></div><div class="line">        output.rectOfInterest = CGRect(x: frame.origin.y / <span class="built_in">size</span>.<span class="built_in">height</span>, y: frame.origin.x / <span class="built_in">size</span>.<span class="built_in">width</span>, <span class="built_in">width</span>: frame.<span class="built_in">size</span>.<span class="built_in">height</span> / <span class="built_in">size</span>.<span class="built_in">height</span>, <span class="built_in">height</span>: frame.<span class="built_in">size</span>.<span class="built_in">width</span> / <span class="built_in">size</span>.<span class="built_in">width</span>)</div><div class="line">        </div><div class="line">        <span class="built_in">return</span> output</div><div class="line">    &#125;()</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">/// 2.创建输出</div><div class="line">    private lazy var output: AVCaptureMetadataOutput = &#123;</div><div class="line">       let output = AVCaptureMetadataOutput()</div><div class="line">        // 设置兴趣点(感兴趣范围), 默认是全屏</div><div class="line">        // 注意: 是以横屏的左上角为参照</div><div class="line">//        output.rectOfInterest = CGRect(x: 0, y: 0, width: 0.5, height: 0.5)</div><div class="line">        let frame = self.containerView.frame</div><div class="line">        let size = self.view.frame.size</div><div class="line">        // 由于是按照横屏来计算的, 所以需要将x变为y, y变为x, 将宽变为高, 高变为宽</div><div class="line">        output.rectOfInterest = CGRect(x: frame.origin.y / size.height, y: frame.origin.x / size.width, width: frame.size.height / size.height, height: frame.size.width / size.width)</div><div class="line">        </div><div class="line">        return output</div><div class="line">    &#125;()</div></pre></td></tr></table></figure>
 </li>
 <li><p>描绘边框</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">captureOutput</span><span class="params">(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// 0. 移除以前的描边</span></div><div class="line">    clearCorners()</div><div class="line"></div><div class="line">    </div><div class="line">    <span class="keyword">for</span> objc <span class="keyword">in</span> metadataObjects</div><div class="line">    &#123;</div><div class="line">        <span class="comment">// 1.将扫描到二维码的坐标转换为我们能够识别的坐标</span></div><div class="line">       <span class="keyword">let</span> codeObjc =  previewLayer.transformedMetadataObjectForMetadataObject(objc <span class="keyword">as</span>! <span class="type">AVMetadataObject</span>)</div><div class="line"></div><div class="line">        <span class="comment">// 2.根据转换好的坐标绘制二维码描边</span></div><div class="line">        drawCorners(codeObjc <span class="keyword">as</span>! <span class="type">AVMetadataMachineReadableCodeObject</span>)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">///绘制二维码描边</span></div><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">drawCorners</span><span class="params">(codeObjc: AVMetadataMachineReadableCodeObject)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> codeObjc.corners == <span class="literal">nil</span> || codeObjc.corners.<span class="built_in">count</span> == <span class="number">0</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// 1.绘制路径</span></div><div class="line">    <span class="keyword">let</span> subLayer = <span class="type">CAShapeLayer</span>()</div><div class="line">    subLayer.lineWidth = <span class="number">4</span></div><div class="line">    subLayer.strokeColor = <span class="type">UIColor</span>.redColor().<span class="type">CGColor</span></div><div class="line">    subLayer.fillColor = <span class="type">UIColor</span>.clearColor().<span class="type">CGColor</span></div><div class="line">    </div><div class="line">    <span class="comment">// 2.从传入对象中获取4个点, 创建Path</span></div><div class="line">    <span class="keyword">let</span> path = <span class="type">UIBezierPath</span>()</div><div class="line">    <span class="keyword">var</span> point = <span class="type">CGPointZero</span></div><div class="line">    <span class="keyword">var</span> index = <span class="number">0</span></div><div class="line">    <span class="keyword">let</span> dictArr = codeObjc.corners</div><div class="line">    <span class="comment">// 2.1取出第0个点</span></div><div class="line">    <span class="comment">// 将字典中的xy转换为CGPoint</span></div><div class="line">    <span class="type">CGPointMakeWithDictionaryRepresentation</span>(dictArr[index++] <span class="keyword">as</span>! <span class="type">CFDictionaryRef</span>, &amp;point)</div><div class="line">    <span class="comment">// 2.2移动到第0个点</span></div><div class="line">    path.moveToPoint(point)</div><div class="line">    </div><div class="line">    <span class="comment">// 2.3添加其它的点</span></div><div class="line">    <span class="keyword">while</span> index &lt; dictArr.<span class="built_in">count</span></div><div class="line">    &#123;</div><div class="line">        <span class="type">CGPointMakeWithDictionaryRepresentation</span>(dictArr[index++] <span class="keyword">as</span>! <span class="type">CFDictionaryRef</span>, &amp;point)</div><div class="line">        path.addLineToPoint(point)</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// 2.4关闭路径</span></div><div class="line">    path.closePath()</div><div class="line">    </div><div class="line">    subLayer.path = path.<span class="type">CGPath</span></div><div class="line">    </div><div class="line">    <span class="comment">// 3.将layer添加到drawLayer上</span></div><div class="line">    drawLayer.addSublayer(subLayer)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/// 移除以前的描边</span></div><div class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">clearCorners</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> drawLayer.sublayers == <span class="literal">nil</span> || drawLayer.sublayers?.<span class="built_in">count</span> == <span class="number">0</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">for</span> subLayer <span class="keyword">in</span> drawLayer.sublayers!</div><div class="line">    &#123;</div><div class="line">        subLayer.removeFromSuperlayer()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)</div><div class="line">&#123;</div><div class="line">    // 0. 移除以前的描边</div><div class="line">    clearCorners()</div><div class="line"></div><div class="line">    </div><div class="line">    for objc in metadataObjects</div><div class="line">    &#123;</div><div class="line">        // 1.将扫描到二维码的坐标转换为我们能够识别的坐标</div><div class="line">       let codeObjc =  previewLayer.transformedMetadataObjectForMetadataObject(objc as! AVMetadataObject)</div><div class="line"></div><div class="line">        // 2.根据转换好的坐标绘制二维码描边</div><div class="line">        drawCorners(codeObjc as! AVMetadataMachineReadableCodeObject)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">///绘制二维码描边</div><div class="line">private func drawCorners(codeObjc: AVMetadataMachineReadableCodeObject)</div><div class="line">&#123;</div><div class="line">    if codeObjc.corners == nil || codeObjc.corners.count == 0</div><div class="line">    &#123;</div><div class="line">        return</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    // 1.绘制路径</div><div class="line">    let subLayer = CAShapeLayer()</div><div class="line">    subLayer.lineWidth = 4</div><div class="line">    subLayer.strokeColor = UIColor.redColor().CGColor</div><div class="line">    subLayer.fillColor = UIColor.clearColor().CGColor</div><div class="line">    </div><div class="line">    // 2.从传入对象中获取4个点, 创建Path</div><div class="line">    let path = UIBezierPath()</div><div class="line">    var point = CGPointZero</div><div class="line">    var index = 0</div><div class="line">    let dictArr = codeObjc.corners</div><div class="line">    // 2.1取出第0个点</div><div class="line">    // 将字典中的xy转换为CGPoint</div><div class="line">    CGPointMakeWithDictionaryRepresentation(dictArr[index++] as! CFDictionaryRef, &amp;point)</div><div class="line">    // 2.2移动到第0个点</div><div class="line">    path.moveToPoint(point)</div><div class="line">    </div><div class="line">    // 2.3添加其它的点</div><div class="line">    while index &lt; dictArr.count</div><div class="line">    &#123;</div><div class="line">        CGPointMakeWithDictionaryRepresentation(dictArr[index++] as! CFDictionaryRef, &amp;point)</div><div class="line">        path.addLineToPoint(point)</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    // 2.4关闭路径</div><div class="line">    path.closePath()</div><div class="line">    </div><div class="line">    subLayer.path = path.CGPath</div><div class="line">    </div><div class="line">    // 3.将layer添加到drawLayer上</div><div class="line">    drawLayer.addSublayer(subLayer)</div><div class="line">&#125;</div><div class="line"></div><div class="line">/// 移除以前的描边</div><div class="line">private func clearCorners()</div><div class="line">&#123;</div><div class="line">    if drawLayer.sublayers == nil || drawLayer.sublayers?.count == 0</div><div class="line">    &#123;</div><div class="line">        return</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    for subLayer in drawLayer.sublayers!</div><div class="line">    &#123;</div><div class="line">        subLayer.removeFromSuperlayer()</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="二维码创建"><a href="#二维码创建" class="headerlink" title="二维码创建"></a>二维码创建</h2><ul>
 <li><p>根据信息创建二维码</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.生成二维码</span></div><div class="line">       </div><div class="line">       <span class="comment">// 1.创建滤镜</span></div><div class="line">       let <span class="keyword">filter</span> = CIFilter(name: <span class="string">"CIQRCodeGenerator"</span>)!</div><div class="line">       <span class="comment">// 2.还原滤镜默认设置</span></div><div class="line">       <span class="keyword">filter</span>.setDefaults()</div><div class="line">       <span class="comment">// 3.设置数据</span></div><div class="line">       <span class="keyword">filter</span>.setValue(<span class="string">"极客江南"</span>.dataUsingEncoding(NSUTF8StringEncoding), forKey: <span class="string">"inputMessage"</span>)</div><div class="line">       <span class="comment">// 4.从滤镜从取出二维码</span></div><div class="line">       let ciImage = <span class="keyword">filter</span>.outputImage!</div><div class="line">       <span class="comment">//        customImageView.image = UIImage(CIImage: ciImage)</span></div><div class="line">       <span class="comment">//        customImageView.image = createNonInterpolatedUIImageFormCIImage(ciImage, size: 500)</span></div><div class="line">       let QRCodeImage = createNonInterpolatedUIImageFormCIImage(ciImage, <span class="keyword">size</span>: <span class="number">500</span>)</div><div class="line">       </div><div class="line">       </div><div class="line">       <span class="comment">// 5.设置图片到界面上</span></div><div class="line">       <span class="keyword">image</span>.<span class="keyword">image</span> = QRCodeImage</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// 1.生成二维码</div><div class="line">       </div><div class="line">       // 1.创建滤镜</div><div class="line">       let filter = CIFilter(name: &quot;CIQRCodeGenerator&quot;)!</div><div class="line">       // 2.还原滤镜默认设置</div><div class="line">       filter.setDefaults()</div><div class="line">       // 3.设置数据</div><div class="line">       filter.setValue(&quot;极客江南&quot;.dataUsingEncoding(NSUTF8StringEncoding), forKey: &quot;inputMessage&quot;)</div><div class="line">       // 4.从滤镜从取出二维码</div><div class="line">       let ciImage = filter.outputImage!</div><div class="line">       //        customImageView.image = UIImage(CIImage: ciImage)</div><div class="line">       //        customImageView.image = createNonInterpolatedUIImageFormCIImage(ciImage, size: 500)</div><div class="line">       let QRCodeImage = createNonInterpolatedUIImageFormCIImage(ciImage, size: 500)</div><div class="line">       </div><div class="line">       </div><div class="line">       // 5.设置图片到界面上</div><div class="line">       image.image = QRCodeImage</div></pre></td></tr></table></figure>
 </li>
 <li><p>生成高清放大的图像<br>```<br>/**<br>  根据CIImage生成指定大小的高清UIImage</p>
 <p>  :param: image 指定CIImage<br>  :param: size    指定大小<br>  :returns: 生成好的图片<br>  */<br>  private func createNonInterpolatedUIImageFormCIImage(image: CIImage, size: CGFloat) -&gt; UIImage {</p>
@@ -266,16 +139,29 @@ return UIImage(CGImage: scaledImage)
 
       
     </div>
-    
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/17/二维码扫描、更新与创建/" data-id="ciqfvmdeg0003kd0ukotqeitp" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
   
     
 <nav id="article-nav">
   
+    <a href="/2016/07/10/网络环境监听-Reachability/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          网络环境监听(Reachability)
+        
+      </div>
+    </a>
+  
   
     <a href="/2015/10/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Hello World</div>
-      <strong class="article-nav-caption">></strong>
     </a>
   
 </nav>
@@ -283,105 +169,86 @@ return UIImage(CGImage: scaledImage)
   
 </article>
 
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
 
-<div class="share">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到：</span>
-		<a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/07/10/rumTime基础使用/">rumTime基础使用</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/多线程之NSOperation/">多线程之NSOperation</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/AFNet上传/">AFNet上传</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/网络环境监听-Reachability/">网络环境监听(Reachability)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/17/二维码扫描、更新与创建/">二维码扫描、更新与创建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="二维码扫描、更新与创建" data-title="" data-url="http://yoursite.com/2015/10/17/二维码扫描、更新与创建/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
-
-</div>
+  
+</aside>
+        
+      </div>
       <footer id="footer">
+  
   <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2016 Junsong
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+    <div id="footer-info" class="inner">
+      &copy; 2016 Junsong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
     </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
     
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: false,
-		isPost: true,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
-</script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
-
-
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
+<script src="/js/script.js"></script>
 
   </div>
 </body>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>AFNet上传 | Junsong’s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="上传
+
+12345678910111213141516171819AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];NSDictionary *dict = @&amp;#123;@&quot;username&quot;:@&quot;hjs&quot;&amp;#125;;[manager POST:@&quot;http://120.25.226.186:32812/upload">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AFNet上传">
+<meta property="og:url" content="http://yoursite.com/2016/07/10/AFNet上传/index.html">
+<meta property="og:site_name" content="Junsong’s Blog">
+<meta property="og:description" content="上传
+
+12345678910111213141516171819AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];NSDictionary *dict = @&amp;#123;@&quot;username&quot;:@&quot;hjs&quot;&amp;#125;;[manager POST:@&quot;http://120.25.226.186:32812/upload">
+<meta property="og:updated_time" content="2016-07-10T00:26:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AFNet上传">
+<meta name="twitter:description" content="上传
+
+12345678910111213141516171819AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];NSDictionary *dict = @&amp;#123;@&quot;username&quot;:@&quot;hjs&quot;&amp;#125;;[manager POST:@&quot;http://120.25.226.186:32812/upload">
+  
+    <link rel="alternative" href="/atom.xml" title="Junsong’s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Junsong’s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-AFNet上传" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/07/10/AFNet上传/" class="article-date">
+  <time datetime="2016-07-10T00:25:19.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AFNet上传
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>上传</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];</div><div class="line"></div><div class="line"><span class="built_in">NSDictionary</span> *dict = @&#123;<span class="string">@"username"</span>:<span class="string">@"hjs"</span>&#125;;</div><div class="line"></div><div class="line">[manager POST:<span class="string">@"http://120.25.226.186:32812/upload"</span> parameters:dict constructingBodyWithBlock:^(<span class="keyword">id</span>&lt;AFMultipartFormData&gt; formData) &#123;</div><div class="line"></div><div class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> fileURLWithPath:<span class="string">@"/Users/Programer/Desktop/桌面/20140701231656_tfNAZ.jpeg"</span>];</div><div class="line"></div><div class="line">[formData appendPartWithFileURL:url name:<span class="string">@"file"</span> error:<span class="literal">nil</span>];</div><div class="line"></div><div class="line">&#125; success:^(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="keyword">id</span> responseObject) &#123;</div><div class="line"><span class="built_in">NSDictionary</span> *res = responseObject;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,res);</div><div class="line">&#125; failure:^(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="built_in">NSError</span> *error) &#123;</div><div class="line"><span class="keyword">if</span> (error) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"失败"</span>);</div><div class="line">&#125;</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<ul>
+<li>下载</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];</div><div class="line"></div><div class="line">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@&quot;http://120.25.226.186:32812/resources/images/minion_02.png&quot;]];</div><div class="line"></div><div class="line">NSProgress *progress = nil;</div><div class="line"></div><div class="line">NSURLSessionDownloadTask * task = [manager downloadTaskWithRequest:request progress:&amp;progress destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) &#123;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">NSString *cacheP = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)lastObject];</div><div class="line"></div><div class="line">NSString *path = [cacheP stringByAppendingPathComponent:response.suggestedFilename];</div><div class="line"></div><div class="line">NSLog(@&quot;%@&quot;,path);</div><div class="line"></div><div class="line">NSURL *url = [NSURL fileURLWithPath:path];</div><div class="line">return url;</div><div class="line">&#125; completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) &#123;</div><div class="line"></div><div class="line">&#125;];</div><div class="line"></div><div class="line">//为进度添加观察者</div><div class="line">[progress addObserver:self forKeyPath:@&quot;completedUnitCount&quot; options:NSKeyValueObservingOptionNew context:nil];</div><div class="line"></div><div class="line">[task resume];</div></pre></td></tr></table></figure>
+<ul>
+<li>get请求</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];</div><div class="line"><span class="built_in">NSDictionary</span> *parameters = @&#123;</div><div class="line"><span class="string">@"username"</span>:<span class="string">@"hjsit"</span>,</div><div class="line"><span class="string">@"pwd"</span>:<span class="string">@"hjsit"</span></div><div class="line">&#125;;</div><div class="line">[manager GET:<span class="string">@"http://120.25.226.186:32812/login"</span> parameters:parameters success:^(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="keyword">id</span> responseObject) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,[responseObject <span class="keyword">class</span>]);</div><div class="line">&#125; failure:^(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="built_in">NSError</span> *error) &#123;</div><div class="line"></div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<ul>
+<li>监听网络状态</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">// 1.创建网络监听管理者对象</div><div class="line">AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];</div><div class="line">// 2.设置监听</div><div class="line">/*</div><div class="line">AFNetworkReachabilityStatusUnknown          = -1,  未识别</div><div class="line">AFNetworkReachabilityStatusNotReachable     = 0,   未连接</div><div class="line">AFNetworkReachabilityStatusReachableViaWWAN = 1,   3G</div><div class="line">AFNetworkReachabilityStatusReachableViaWiFi = 2,  wifi</div><div class="line">*/</div><div class="line">[manager setReachabilityStatusChangeBlock:^ void(AFNetworkReachabilityStatus status) &#123;</div><div class="line">switch (status) &#123;</div><div class="line">case AFNetworkReachabilityStatusNotReachable:</div><div class="line">NSLog(@&quot;未连接&quot;);</div><div class="line">break;</div><div class="line">case AFNetworkReachabilityStatusReachableViaWWAN:</div><div class="line">NSLog(@&quot;手机自带网络&quot;);</div><div class="line">break;</div><div class="line">case AFNetworkReachabilityStatusReachableViaWiFi:</div><div class="line">NSLog(@&quot;wifi网络&quot;);</div><div class="line">break;</div><div class="line">default:</div><div class="line">NSLog(@&quot;未识别&quot;);</div><div class="line">break;</div><div class="line">&#125;</div><div class="line">&#125;];</div><div class="line"></div><div class="line">// 3.开启监听</div><div class="line">[manager startMonitoring];</div></pre></td></tr></table></figure>
+<ul>
+<li>序列化，数据返回类型</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 1.创建网络管理者</span></div><div class="line">AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];</div><div class="line"></div><div class="line"><span class="comment">// 2.利用网络管理者发送get请求</span></div><div class="line"><span class="comment">//    NSDictionary *parameters = @&#123;</span></div><div class="line"><span class="comment">//                                 @"username":@"hjsit",</span></div><div class="line"><span class="comment">//                                 @"pwd":@"hjsit",</span></div><div class="line"><span class="comment">//                                 @"type":@"XML"</span></div><div class="line"><span class="comment">//                                 &#125;;</span></div><div class="line">[AFJSONResponseSerializer serializer].acceptableContentTypes = [<span class="built_in">NSSet</span> setWithObject:<span class="string">@"text/xml"</span>];</div><div class="line"><span class="comment">// 告诉AFN, 将返回的数据当做JSON来处理</span></div><div class="line"><span class="comment">//    manager.responseSerializer = [AFJSONRequestSerializer serializer];</span></div><div class="line"><span class="comment">// 告诉AFN, 将返回的数据当做XML来处理</span></div><div class="line"><span class="comment">//    manager.responseSerializer = [AFXMLParserResponseSerializer serializer];</span></div><div class="line"><span class="comment">// 告诉AFN, 将返回的数据当做二进制来数据 (服务器返回什么就是什么)</span></div><div class="line">manager.responseSerializer = [AFHTTPResponseSerializer serializer];</div><div class="line"></div><div class="line">[manager GET:<span class="string">@"http://120.25.226.186:32812/resources/images/minion_02.png"</span> parameters:<span class="literal">nil</span> success:^ <span class="keyword">void</span>(<span class="built_in">NSURLSessionDataTask</span> * task, <span class="keyword">id</span> responseObject) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"请求成功 %@"</span>, [responseObject <span class="keyword">class</span>]);</div><div class="line">&#125; failure:^ <span class="keyword">void</span>(<span class="built_in">NSURLSessionDataTask</span> * operation, <span class="built_in">NSError</span> * error) &#123;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"请求失败 %@"</span>, error);</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
+<ul>
+<li>AFN推荐继承，推荐使用initWithBaseURL,单例</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">+ (<span class="keyword">instancetype</span>)shareNetworkTools2</div><div class="line">&#123;</div><div class="line"><span class="keyword">static</span> XMGNetworkTools2 *instance;</div><div class="line"><span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</div><div class="line"><span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</div><div class="line"></div><div class="line"><span class="built_in">NSURLSessionConfiguration</span> *cfg  = [<span class="built_in">NSURLSessionConfiguration</span> defaultSessionConfiguration];</div><div class="line"><span class="built_in">NSURL</span> *url = [<span class="built_in">NSURL</span> URLWithString:<span class="string">@"http://120.25.226.186:32812/"</span>];</div><div class="line">instance = [[<span class="keyword">self</span> alloc] initWithBaseURL:url sessionConfiguration:cfg];</div><div class="line">&#125;);</div><div class="line"><span class="keyword">return</span> instance;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>AFN已经封装了HTTPS证书授权代码，直接可以请求，下面是证书授权代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">*</div><div class="line">只要请求的地址是HTTPS的, 就会调用这个代理方法</div><div class="line">我们需要在该方法中告诉系统, 是否信任服务器返回的证书</div><div class="line">Challenge: 挑战 质问 (包含了受保护的区域)</div><div class="line">protectionSpace : 受保护区域</div><div class="line">NSURLAuthenticationMethodServerTrust : 证书的类型是 服务器信任</div><div class="line">*/</div><div class="line">- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *))completionHandler</div><div class="line">&#123;</div><div class="line">//    NSLog(@&quot;didReceiveChallenge %@&quot;, challenge.protectionSpace);</div><div class="line">NSLog(@&quot;%@&quot;, challenge.protectionSpace.authenticationMethod);</div><div class="line">// 1.判断服务器返回的证书类型, 是否是服务器信任</div><div class="line">if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) &#123;</div><div class="line">NSLog(@&quot;是服务器信任的证书&quot;);</div><div class="line">/*</div><div class="line">NSURLSessionAuthChallengeUseCredential = 0,                     使用证书</div><div class="line">NSURLSessionAuthChallengePerformDefaultHandling = 1,            忽略证书(默认的处理方式)</div><div class="line">NSURLSessionAuthChallengeCancelAuthenticationChallenge = 2,     忽略书证, 并取消这次请求</div><div class="line">NSURLSessionAuthChallengeRejectProtectionSpace = 3,            忽略当前这一次, 下一次再询问</div><div class="line">*/</div><div class="line">NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];</div><div class="line">completionHandler(NSURLSessionAuthChallengeUseCredential , credential);</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/07/10/AFNet上传/" data-id="ciqfvmdee0002kd0uvl7g8rlj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/10/多线程之NSOperation/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          多线程之NSOperation
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/10/网络环境监听-Reachability/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">网络环境监听(Reachability)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/07/10/rumTime基础使用/">rumTime基础使用</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/多线程之NSOperation/">多线程之NSOperation</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/AFNet上传/">AFNet上传</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/网络环境监听-Reachability/">网络环境监听(Reachability)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/17/二维码扫描、更新与创建/">二维码扫描、更新与创建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Junsong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
