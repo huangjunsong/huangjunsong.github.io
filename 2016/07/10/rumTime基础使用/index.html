@@ -5,16 +5,16 @@
   
   <title>rumTime基础使用 | Junsong’s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="获取对象的所有属性，不包括属性值12345678910111213- (NSArray *)getAllProperties&amp;#123;u_int count;   objc_property_t *properties  =class_copyPropertyList([self class], &amp;amp;count);  NSMutableArray *propertiesArray = [N">
+  <meta name="description" content="&amp;#x83B7;&amp;#x53D6;&amp;#x5BF9;&amp;#x8C61;&amp;#x7684;&amp;#x6240;&amp;#x6709;&amp;#x5C5E;&amp;#x6027;&amp;#xFF0C;&amp;#x4E0D;&amp;#x5305;&amp;#x62EC;&amp;#x5C5E;&amp;#x6027;&amp;#x503C;12345678910111213- (NSArray *)getAllProperties{u_int count;   objc_prope">
 <meta property="og:type" content="article">
 <meta property="og:title" content="rumTime基础使用">
 <meta property="og:url" content="http://yoursite.com/2016/07/10/rumTime基础使用/index.html">
 <meta property="og:site_name" content="Junsong’s Blog">
-<meta property="og:description" content="获取对象的所有属性，不包括属性值12345678910111213- (NSArray *)getAllProperties&amp;#123;u_int count;   objc_property_t *properties  =class_copyPropertyList([self class], &amp;amp;count);  NSMutableArray *propertiesArray = [N">
+<meta property="og:description" content="&amp;#x83B7;&amp;#x53D6;&amp;#x5BF9;&amp;#x8C61;&amp;#x7684;&amp;#x6240;&amp;#x6709;&amp;#x5C5E;&amp;#x6027;&amp;#xFF0C;&amp;#x4E0D;&amp;#x5305;&amp;#x62EC;&amp;#x5C5E;&amp;#x6027;&amp;#x503C;12345678910111213- (NSArray *)getAllProperties{u_int count;   objc_prope">
 <meta property="og:updated_time" content="2016-07-10T00:43:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="rumTime基础使用">
-<meta name="twitter:description" content="获取对象的所有属性，不包括属性值12345678910111213- (NSArray *)getAllProperties&amp;#123;u_int count;   objc_property_t *properties  =class_copyPropertyList([self class], &amp;amp;count);  NSMutableArray *propertiesArray = [N">
+<meta name="twitter:description" content="&amp;#x83B7;&amp;#x53D6;&amp;#x5BF9;&amp;#x8C61;&amp;#x7684;&amp;#x6240;&amp;#x6709;&amp;#x5C5E;&amp;#x6027;&amp;#xFF0C;&amp;#x4E0D;&amp;#x5305;&amp;#x62EC;&amp;#x5C5E;&amp;#x6027;&amp;#x503C;12345678910111213- (NSArray *)getAllProperties{u_int count;   objc_prope">
   
     <link rel="alternative" href="/atom.xml" title="Junsong’s Blog" type="application/atom+xml">
   
@@ -82,13 +82,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="获取对象的所有属性，不包括属性值"><a href="#获取对象的所有属性，不包括属性值" class="headerlink" title="获取对象的所有属性，不包括属性值"></a>获取对象的所有属性，不包括属性值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">- (NSArray *)getAllProperties</div><div class="line">&#123;</div><div class="line">u_int count;   </div><div class="line">objc_property_t *properties  =class_copyPropertyList([self class], &amp;count);  </div><div class="line">NSMutableArray *propertiesArray = [NSMutableArray arrayWithCapacity:count];   </div><div class="line">for (int i = 0; i&lt;count; i++)</div><div class="line">&#123;</div><div class="line">const char* propertyName =property_getName(properties[i]);</div><div class="line">[propertiesArray addObject: [NSString stringWithUTF8String: propertyName]];   </div><div class="line">&#125;   </div><div class="line">free(properties);   </div><div class="line">return propertiesArray;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="获取对象的所有属性-以及属性值"><a href="#获取对象的所有属性-以及属性值" class="headerlink" title="获取对象的所有属性 以及属性值"></a>获取对象的所有属性 以及属性值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- (NSDictionary *)properties_aps</div><div class="line">&#123;</div><div class="line">NSMutableDictionary *props = [NSMutableDictionary dictionary];   </div><div class="line">unsigned int outCount, i;   </div><div class="line">objc_property_t *properties = class_copyPropertyList([self class], &amp;outCount);   </div><div class="line">for (i = 0; i&lt;outCount; i++)</div><div class="line">&#123;</div><div class="line">objc_property_t property = properties[i];</div><div class="line">const char* char_f =property_getName(property);</div><div class="line">NSString *propertyName = [NSString stringWithUTF8String:char_f];</div><div class="line">id propertyValue = [self valueForKey:(NSString *)propertyName];   </div><div class="line">if (propertyValue) [props setObject:propertyValue forKey:propertyName];   </div><div class="line">&#125;   </div><div class="line">free(properties);   </div><div class="line">return props;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="获取对象的所有方法"><a href="#获取对象的所有方法" class="headerlink" title="获取对象的所有方法"></a>获取对象的所有方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">-(void)printMothList</div><div class="line">&#123;</div><div class="line">unsigned int mothCout_f =0;</div><div class="line">Method* mothList_f = class_copyMethodList([self class],&amp;mothCout_f);</div><div class="line">for(int i=0;i&lt;mothCout_f;i++)</div><div class="line">&#123;</div><div class="line">Method temp_f = mothList_f[i];</div><div class="line">IMP imp_f = method_getImplementation(temp_f);</div><div class="line">SEL name_f = method_getName(temp_f);</div><div class="line">const char* name_s =sel_getName(method_getName(temp_f));</div><div class="line">int arguments = method_getNumberOfArguments(temp_f);</div><div class="line">const char* encoding =method_getTypeEncoding(temp_f);</div><div class="line">NSLog(@&quot;方法名：%@,参数个数：%d,编码方式：%@&quot;,[NSString stringWithUTF8String:name_s],</div><div class="line">arguments,[NSString stringWithUTF8String:encoding]);</div><div class="line">&#125;</div><div class="line">free(mothList_f);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h2 id="&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;&#x5C5E;&#x6027;&#x503C;"><a href="#&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;&#x5C5E;&#x6027;&#x503C;" class="headerlink" title="&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;&#x5C5E;&#x6027;&#x503C;"></a>&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;&#x5C5E;&#x6027;&#x503C;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">- (NSArray *)getAllProperties</div><div class="line">{</div><div class="line">u_int count;   </div><div class="line">objc_property_t *properties  =class_copyPropertyList([self class], &amp;count);  </div><div class="line">NSMutableArray *propertiesArray = [NSMutableArray arrayWithCapacity:count];   </div><div class="line">for (int i = 0; i&lt;count; i++)</div><div class="line">{</div><div class="line">const char* propertyName =property_getName(properties[i]);</div><div class="line">[propertiesArray addObject: [NSString stringWithUTF8String: propertyName]];   </div><div class="line">}   </div><div class="line">free(properties);   </div><div class="line">return propertiesArray;  </div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;-&#x4EE5;&#x53CA;&#x5C5E;&#x6027;&#x503C;"><a href="#&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;-&#x4EE5;&#x53CA;&#x5C5E;&#x6027;&#x503C;" class="headerlink" title="&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027; &#x4EE5;&#x53CA;&#x5C5E;&#x6027;&#x503C;"></a>&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027; &#x4EE5;&#x53CA;&#x5C5E;&#x6027;&#x503C;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">- (NSDictionary *)properties_aps</div><div class="line">{</div><div class="line">NSMutableDictionary *props = [NSMutableDictionary dictionary];   </div><div class="line">unsigned int outCount, i;   </div><div class="line">objc_property_t *properties = class_copyPropertyList([self class], &amp;outCount);   </div><div class="line">for (i = 0; i&lt;outCount; i++)</div><div class="line">{</div><div class="line">objc_property_t property = properties[i];</div><div class="line">const char* char_f =property_getName(property);</div><div class="line">NSString *propertyName = [NSString stringWithUTF8String:char_f];</div><div class="line">id propertyValue = [self valueForKey:(NSString *)propertyName];   </div><div class="line">if (propertyValue) [props setObject:propertyValue forKey:propertyName];   </div><div class="line">}   </div><div class="line">free(properties);   </div><div class="line">return props;   </div><div class="line">}</div></pre></td></tr></table></figure>
+<h2 id="&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;"><a href="#&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;" class="headerlink" title="&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;"></a>&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">-(void)printMothList</div><div class="line">{</div><div class="line">unsigned int mothCout_f =0;</div><div class="line">Method* mothList_f = class_copyMethodList([self class],&amp;mothCout_f);</div><div class="line">for(int i=0;i&lt;mothCout_f;i++)</div><div class="line">{</div><div class="line">Method temp_f = mothList_f[i];</div><div class="line">IMP imp_f = method_getImplementation(temp_f);</div><div class="line">SEL name_f = method_getName(temp_f);</div><div class="line">const char* name_s =sel_getName(method_getName(temp_f));</div><div class="line">int arguments = method_getNumberOfArguments(temp_f);</div><div class="line">const char* encoding =method_getTypeEncoding(temp_f);</div><div class="line">NSLog(@&quot;&#x65B9;&#x6CD5;&#x540D;&#xFF1A;%@,&#x53C2;&#x6570;&#x4E2A;&#x6570;&#xFF1A;%d,&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#xFF1A;%@&quot;,[NSString stringWithUTF8String:name_s],</div><div class="line">arguments,[NSString stringWithUTF8String:encoding]);</div><div class="line">}</div><div class="line">free(mothList_f);</div><div class="line">}</div></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/07/10/rumTime基础使用/" data-id="ciqfvmde50000kd0uosu7hi8y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/07/10/rumTime基础使用/" data-id="ciqirex6z00029p0uelrzlmhl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -96,6 +96,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/07/12/runloop/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          runloop
+        
+      </div>
+    </a>
   
   
     <a href="/2016/07/10/多线程之NSOperation/" id="article-nav-older" class="article-nav-link-wrap">
@@ -122,7 +131,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -134,23 +143,23 @@
       <ul>
         
           <li>
+            <a href="/2016/07/12/图片无限循环/">图片无限循环</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/12/消息转发/">消息转发</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/12/runloop/">runloop</a>
+          </li>
+        
+          <li>
             <a href="/2016/07/10/rumTime基础使用/">rumTime基础使用</a>
           </li>
         
           <li>
             <a href="/2016/07/10/多线程之NSOperation/">多线程之NSOperation</a>
-          </li>
-        
-          <li>
-            <a href="/2016/07/10/AFNet上传/">AFNet上传</a>
-          </li>
-        
-          <li>
-            <a href="/2016/07/10/网络环境监听-Reachability/">网络环境监听(Reachability)</a>
-          </li>
-        
-          <li>
-            <a href="/2015/10/17/二维码扫描、更新与创建/">二维码扫描、更新与创建</a>
           </li>
         
       </ul>
