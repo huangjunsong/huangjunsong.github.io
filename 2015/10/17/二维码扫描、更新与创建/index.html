@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="Junsong’s Blog">
 <meta property="og:description" content="&amp;#x4E8C;&amp;#x7EF4;&amp;#x7801;&amp;#x9700;&amp;#x8981;&amp;#x7528;&amp;#x5230;&amp;#x5E93;AVFoundation
 &amp;#x5BFC;&amp;#x5165;&amp;#x5E93;&amp;#x5B8C;&amp;#x6BD5;&amp;#x540E;&amp;#xFF0C;&amp;#x6309;&amp;#x7167;&amp;#x4E0B;&amp;#x9762;&amp;#x51E0;&amp;#x4E2A;&amp;#x6B65;&amp;#x9AA4;&amp;#">
-<meta property="og:updated_time" content="2016-07-10T00:22:36.000Z">
+<meta property="og:updated_time" content="2016-07-12T07:34:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二维码扫描、更新与创建">
 <meta name="twitter:description" content="&amp;#x4E8C;&amp;#x7EF4;&amp;#x7801;&amp;#x9700;&amp;#x8981;&amp;#x7528;&amp;#x5230;&amp;#x5E93;AVFoundation
@@ -308,33 +308,10 @@
 <li><p>&#x6839;&#x636E;&#x4FE1;&#x606F;&#x521B;&#x5EFA;&#x4E8C;&#x7EF4;&#x7801;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// 1.&#x751F;&#x6210;&#x4E8C;&#x7EF4;&#x7801;</div><div class="line">       </div><div class="line">       // 1.&#x521B;&#x5EFA;&#x6EE4;&#x955C;</div><div class="line">       let filter = CIFilter(name: &quot;CIQRCodeGenerator&quot;)!</div><div class="line">       // 2.&#x8FD8;&#x539F;&#x6EE4;&#x955C;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;</div><div class="line">       filter.setDefaults()</div><div class="line">       // 3.&#x8BBE;&#x7F6E;&#x6570;&#x636E;</div><div class="line">       filter.setValue(&quot;&#x6781;&#x5BA2;&#x6C5F;&#x5357;&quot;.dataUsingEncoding(NSUTF8StringEncoding), forKey: &quot;inputMessage&quot;)</div><div class="line">       // 4.&#x4ECE;&#x6EE4;&#x955C;&#x4ECE;&#x53D6;&#x51FA;&#x4E8C;&#x7EF4;&#x7801;</div><div class="line">       let ciImage = filter.outputImage!</div><div class="line">       //        customImageView.image = UIImage(CIImage: ciImage)</div><div class="line">       //        customImageView.image = createNonInterpolatedUIImageFormCIImage(ciImage, size: 500)</div><div class="line">       let QRCodeImage = createNonInterpolatedUIImageFormCIImage(ciImage, size: 500)</div><div class="line">       </div><div class="line">       </div><div class="line">       // 5.&#x8BBE;&#x7F6E;&#x56FE;&#x7247;&#x5230;&#x754C;&#x9762;&#x4E0A;</div><div class="line">       image.image = QRCodeImage</div></pre></td></tr></table></figure>
 </li>
-<li><p>&#x751F;&#x6210;&#x9AD8;&#x6E05;&#x653E;&#x5927;&#x7684;&#x56FE;&#x50CF;<br>```<br>/**<br>  &#x6839;&#x636E;CIImage&#x751F;&#x6210;&#x6307;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x9AD8;&#x6E05;UIImage</p>
-<p>  :param: image &#x6307;&#x5B9A;CIImage<br>  :param: size    &#x6307;&#x5B9A;&#x5927;&#x5C0F;<br>  :returns: &#x751F;&#x6210;&#x597D;&#x7684;&#x56FE;&#x7247;<br>  */<br>  private func createNonInterpolatedUIImageFormCIImage(image: CIImage, size: CGFloat) -&gt; UIImage {</p>
-<pre><code>let extent: CGRect = CGRectIntegral(image.extent)
-let scale: CGFloat = min(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent))
-
-// 1.&#x521B;&#x5EFA;bitmap;
-let width = CGRectGetWidth(extent) * scale
-let height = CGRectGetHeight(extent) * scale
-let cs: CGColorSpaceRef = CGColorSpaceCreateDeviceGray()!
-let bitmapRef = CGBitmapContextCreate(nil, Int(width), Int(height), 8, 0, cs, 0)!
-
-let context = CIContext(options: nil)
-let bitmapImage: CGImageRef = context.createCGImage(image, fromRect: extent)
-
-CGContextSetInterpolationQuality(bitmapRef,  CGInterpolationQuality.None)
-CGContextScaleCTM(bitmapRef, scale, scale);
-CGContextDrawImage(bitmapRef, extent, bitmapImage);
-
-// 2.&#x4FDD;&#x5B58;bitmap&#x5230;&#x56FE;&#x7247;
-let scaledImage: CGImageRef = CGBitmapContextCreateImage(bitmapRef)!
-
-return UIImage(CGImage: scaledImage)
-</code></pre><p>  }</p>
+<li><p>&#x751F;&#x6210;&#x9AD8;&#x6E05;&#x653E;&#x5927;&#x7684;&#x56FE;&#x50CF;</p>
 </li>
 </ul>
-<p>## </p>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">    &#x6839;&#x636E;CIImage&#x751F;&#x6210;&#x6307;&#x5B9A;&#x5927;&#x5C0F;&#x7684;&#x9AD8;&#x6E05;UIImage</div><div class="line">    </div><div class="line">    :param: image &#x6307;&#x5B9A;CIImage</div><div class="line">    :param: size    &#x6307;&#x5B9A;&#x5927;&#x5C0F;</div><div class="line">    :returns: &#x751F;&#x6210;&#x597D;&#x7684;&#x56FE;&#x7247;</div><div class="line">    */</div><div class="line">    private func createNonInterpolatedUIImageFormCIImage(image: CIImage, size: CGFloat) -&gt; UIImage {</div><div class="line">        </div><div class="line">        let extent: CGRect = CGRectIntegral(image.extent)</div><div class="line">        let scale: CGFloat = min(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent))</div><div class="line">        </div><div class="line">        // 1.&#x521B;&#x5EFA;bitmap;</div><div class="line">        let width = CGRectGetWidth(extent) * scale</div><div class="line">        let height = CGRectGetHeight(extent) * scale</div><div class="line">        let cs: CGColorSpaceRef = CGColorSpaceCreateDeviceGray()!</div><div class="line">        let bitmapRef = CGBitmapContextCreate(nil, Int(width), Int(height), 8, 0, cs, 0)!</div><div class="line">        </div><div class="line">        let context = CIContext(options: nil)</div><div class="line">        let bitmapImage: CGImageRef = context.createCGImage(image, fromRect: extent)</div><div class="line">        </div><div class="line">        CGContextSetInterpolationQuality(bitmapRef,  CGInterpolationQuality.None)</div><div class="line">        CGContextScaleCTM(bitmapRef, scale, scale);</div><div class="line">        CGContextDrawImage(bitmapRef, extent, bitmapImage);</div><div class="line">        </div><div class="line">        // 2.&#x4FDD;&#x5B58;bitmap&#x5230;&#x56FE;&#x7247;</div><div class="line">        let scaledImage: CGImageRef = CGBitmapContextCreateImage(bitmapRef)!</div><div class="line">        </div><div class="line">        return UIImage(CGImage: scaledImage)</div><div class="line">    }</div></pre></td></tr></table></figure>
       
     </div>
 
