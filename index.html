@@ -238,6 +238,193 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/18/常用git命令/" itemprop="url">
+                  常用git命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">發表於</span>
+            <time itemprop="dateCreated" datetime="2016-07-18T16:16:00+08:00" content="2016-07-18">
+              2016-07-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/18/常用git命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/18/常用git命令/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>&#x67E5;&#x770B;&#x3001;&#x6DFB;&#x52A0;&#x3001;&#x63D0;&#x4EA4;&#x3001;&#x5220;&#x9664;&#x3001;&#x627E;&#x56DE;&#xFF0C;&#x91CD;&#x7F6E;&#x4FEE;&#x6539;&#x6587;&#x4EF6;</p>
+<p>git help <command> # &#x663E;&#x793A;command&#x7684;help</p>
+<p>git show # &#x663E;&#x793A;&#x67D0;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x5185;&#x5BB9; git show $id</p>
+<p>git co &#x2013; <file> # &#x629B;&#x5F03;&#x5DE5;&#x4F5C;&#x533A;&#x4FEE;&#x6539;</file></p>
+<p>git co . # &#x629B;&#x5F03;&#x5DE5;&#x4F5C;&#x533A;&#x4FEE;&#x6539;</p>
+<p>git add <file> # &#x5C06;&#x5DE5;&#x4F5C;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x63D0;&#x4EA4;&#x5230;&#x672C;&#x5730;&#x6682;&#x5B58;&#x533A;</file></p>
+<p>git add . # &#x5C06;&#x6240;&#x6709;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x5DE5;&#x4F5C;&#x6587;&#x4EF6;&#x63D0;&#x4EA4;&#x6682;&#x5B58;&#x533A;</p>
+<p>git rm <file> # &#x4ECE;&#x7248;&#x672C;&#x5E93;&#x4E2D;&#x5220;&#x9664;&#x6587;&#x4EF6;</file></p>
+<p>git rm <file> &#x2013;cached # &#x4ECE;&#x7248;&#x672C;&#x5E93;&#x4E2D;&#x5220;&#x9664;&#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x4E0D;&#x5220;&#x9664;&#x6587;&#x4EF6;</file></p>
+<p>git reset <file> # &#x4ECE;&#x6682;&#x5B58;&#x533A;&#x6062;&#x590D;&#x5230;&#x5DE5;&#x4F5C;&#x6587;&#x4EF6;</file></p>
+<p>git reset &#x2013; . # &#x4ECE;&#x6682;&#x5B58;&#x533A;&#x6062;&#x590D;&#x5230;&#x5DE5;&#x4F5C;&#x6587;&#x4EF6;</p>
+<p>git reset &#x2013;hard # &#x6062;&#x590D;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x8FC7;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5373;&#x653E;&#x5F03;&#x4E0A;&#x6B21;&#x63D0;&#x4EA4;&#x540E;&#x7684;&#x6240;&#x6709;&#x672C;&#x6B21;&#x4FEE;&#x6539;</p>
+<p>git ci <file> git ci . git ci -a # &#x5C06;git add, git rm&#x548C;git ci&#x7B49;&#x64CD;&#x4F5C;&#x90FD;&#x5408;&#x5E76;&#x5728;&#x4E00;&#x8D77;&#x505A;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;git ci -am &#x201C;some comments&#x201D;</file></p>
+<p>git ci &#x2013;amend # &#x4FEE;&#x6539;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;</p>
+<p>git revert &lt;$id&gt; # &#x6062;&#x590D;&#x67D0;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x6062;&#x590D;&#x52A8;&#x4F5C;&#x672C;&#x8EAB;&#x4E5F;&#x521B;&#x5EFA;&#x6B21;&#x63D0;&#x4EA4;&#x5BF9;&#x8C61;</p>
+<p>git revert HEAD # &#x6062;&#x590D;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x72B6;&#x6001;</p>
+<p>&#x67E5;&#x770B;&#x6587;&#x4EF6;diff</p>
+<p>git diff <file> # &#x6BD4;&#x8F83;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x548C;&#x6682;&#x5B58;&#x533A;&#x6587;&#x4EF6;&#x5DEE;&#x5F02; git diff</file></p>
+<p>git diff &lt;$id1&gt; &lt;$id2&gt; # &#x6BD4;&#x8F83;&#x4E24;&#x6B21;&#x63D0;&#x4EA4;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;</p>
+<p>git diff <branch1>..<branch2> # &#x5728;&#x4E24;&#x4E2A;&#x5206;&#x652F;&#x4E4B;&#x95F4;&#x6BD4;&#x8F83;</branch2></branch1></p>
+<p>git diff &#x2013;staged # &#x6BD4;&#x8F83;&#x6682;&#x5B58;&#x533A;&#x548C;&#x7248;&#x672C;&#x5E93;&#x5DEE;&#x5F02;</p>
+<p>git diff &#x2013;cached # &#x6BD4;&#x8F83;&#x6682;&#x5B58;&#x533A;&#x548C;&#x7248;&#x672C;&#x5E93;&#x5DEE;&#x5F02;</p>
+<p>git diff &#x2013;stat # &#x4EC5;&#x4EC5;&#x6BD4;&#x8F83;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;</p>
+<p>&#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;</p>
+<p>git log git log <file> # &#x67E5;&#x770B;&#x8BE5;&#x6587;&#x4EF6;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;</file></p>
+<p>git log -p <file> # &#x67E5;&#x770B;&#x6BCF;&#x6B21;&#x8BE6;&#x7EC6;&#x4FEE;&#x6539;&#x5185;&#x5BB9;&#x7684;diff</file></p>
+<p>git log -p -2 # &#x67E5;&#x770B;&#x6700;&#x8FD1;&#x4E24;&#x6B21;&#x8BE6;&#x7EC6;&#x4FEE;&#x6539;&#x5185;&#x5BB9;&#x7684;diff</p>
+<p>git log &#x2013;stat #&#x67E5;&#x770B;&#x63D0;&#x4EA4;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;</p>
+<p>tig</p>
+<p>Mac&#x4E0A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;tig&#x4EE3;&#x66FF;diff&#x548C;log&#xFF0C;brew install tig</p>
+<p>Git &#x672C;&#x5730;&#x5206;&#x652F;&#x7BA1;&#x7406;</p>
+<p>&#x67E5;&#x770B;&#x3001;&#x5207;&#x6362;&#x3001;&#x521B;&#x5EFA;&#x548C;&#x5220;&#x9664;&#x5206;&#x652F;</p>
+<p>git br -r # &#x67E5;&#x770B;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</p>
+<p>git br <new_branch> # &#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5206;&#x652F;</new_branch></p>
+<p>git br -v # &#x67E5;&#x770B;&#x5404;&#x4E2A;&#x5206;&#x652F;&#x6700;&#x540E;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;</p>
+<p>git br &#x2013;merged # &#x67E5;&#x770B;&#x5DF2;&#x7ECF;&#x88AB;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;&#x7684;&#x5206;&#x652F;</p>
+<p>git br &#x2013;no-merged # &#x67E5;&#x770B;&#x5C1A;&#x672A;&#x88AB;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;&#x7684;&#x5206;&#x652F;</p>
+<p>git co <branch> # &#x5207;&#x6362;&#x5230;&#x67D0;&#x4E2A;&#x5206;&#x652F;</branch></p>
+<p>git co -b <new_branch> # &#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x5E76;&#x4E14;&#x5207;&#x6362;&#x8FC7;&#x53BB;</new_branch></p>
+<p>git co -b <new_branch> <branch> # &#x57FA;&#x4E8E;branch&#x521B;&#x5EFA;&#x65B0;&#x7684;new_branch</branch></new_branch></p>
+<p>git co $id # &#x628A;&#x67D0;&#x6B21;&#x5386;&#x53F2;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;checkout&#x51FA;&#x6765;&#xFF0C;&#x4F46;&#x65E0;&#x5206;&#x652F;&#x4FE1;&#x606F;&#xFF0C;&#x5207;&#x6362;&#x5230;&#x5176;&#x4ED6;&#x5206;&#x652F;&#x4F1A;&#x81EA;&#x52A8;&#x5220;&#x9664;</p>
+<p>git co $id -b <new_branch> # &#x628A;&#x67D0;&#x6B21;&#x5386;&#x53F2;&#x63D0;&#x4EA4;&#x8BB0;&#x5F55;checkout&#x51FA;&#x6765;&#xFF0C;&#x521B;&#x5EFA;&#x6210;&#x4E00;&#x4E2A;&#x5206;&#x652F;</new_branch></p>
+<p>git br -d <branch> # &#x5220;&#x9664;&#x67D0;&#x4E2A;&#x5206;&#x652F;</branch></p>
+<p>git br -D <branch> # &#x5F3A;&#x5236;&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x5206;&#x652F; (&#x672A;&#x88AB;&#x5408;&#x5E76;&#x7684;&#x5206;&#x652F;&#x88AB;&#x5220;&#x9664;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5F3A;&#x5236;)</branch></p>
+<p>&#x5206;&#x652F;&#x5408;&#x5E76;&#x548C;rebase</p>
+<p>git merge <branch> # &#x5C06;branch&#x5206;&#x652F;&#x5408;&#x5E76;&#x5230;&#x5F53;&#x524D;&#x5206;&#x652F;</branch></p>
+<p>git merge origin/master &#x2013;no-ff # &#x4E0D;&#x8981;Fast-Foward&#x5408;&#x5E76;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x751F;&#x6210;merge&#x63D0;&#x4EA4;</p>
+<p>git rebase master <branch> # &#x5C06;master rebase&#x5230;branch&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#xFF1A; git co <branch> &amp;&amp; git rebase master &amp;&amp; git co master &amp;&amp; git merge <branch></branch></branch></branch></p>
+<p>Git&#x8865;&#x4E01;&#x7BA1;&#x7406;(&#x65B9;&#x4FBF;&#x5728;&#x591A;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x5F00;&#x53D1;&#x540C;&#x6B65;&#x65F6;&#x7528;)</p>
+<p>git diff &gt; ../sync.patch # &#x751F;&#x6210;&#x8865;&#x4E01;</p>
+<p>git apply ../sync.patch # &#x6253;&#x8865;&#x4E01;</p>
+<p>git apply &#x2013;check ../sync.patch #&#x6D4B;&#x8BD5;&#x8865;&#x4E01;&#x80FD;&#x5426;&#x6210;&#x529F;</p>
+<p>Git&#x6682;&#x5B58;&#x7BA1;&#x7406;</p>
+<p>git stash # &#x6682;&#x5B58;</p>
+<p>git stash list # &#x5217;&#x6240;&#x6709;stash</p>
+<p>git stash apply # &#x6062;&#x590D;&#x6682;&#x5B58;&#x7684;&#x5185;&#x5BB9;</p>
+<p>git stash drop # &#x5220;&#x9664;&#x6682;&#x5B58;&#x533A;</p>
+<p>Git&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x7BA1;&#x7406;</p>
+<p>git pull # &#x6293;&#x53D6;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x6240;&#x6709;&#x5206;&#x652F;&#x66F4;&#x65B0;&#x5E76;&#x5408;&#x5E76;&#x5230;&#x672C;&#x5730;</p>
+<p>git pull &#x2013;no-ff # &#x6293;&#x53D6;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x6240;&#x6709;&#x5206;&#x652F;&#x66F4;&#x65B0;&#x5E76;&#x5408;&#x5E76;&#x5230;&#x672C;&#x5730;&#xFF0C;&#x4E0D;&#x8981;&#x5FEB;&#x8FDB;&#x5408;&#x5E76;</p>
+<p>git fetch origin # &#x6293;&#x53D6;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x66F4;&#x65B0;</p>
+<p>git merge origin/master # &#x5C06;&#x8FDC;&#x7A0B;&#x4E3B;&#x5206;&#x652F;&#x5408;&#x5E76;&#x5230;&#x672C;&#x5730;&#x5F53;&#x524D;&#x5206;&#x652F;</p>
+<p>git co &#x2013;track origin/branch # &#x8DDF;&#x8E2A;&#x67D0;&#x4E2A;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x521B;&#x5EFA;&#x76F8;&#x5E94;&#x7684;&#x672C;&#x5730;&#x5206;&#x652F;</p>
+<p>git co -b <local_branch> origin/<remote_branch> # &#x57FA;&#x4E8E;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x521B;&#x5EFA;&#x672C;&#x5730;&#x5206;&#x652F;&#xFF0C;&#x529F;&#x80FD;&#x540C;&#x4E0A;</remote_branch></local_branch></p>
+<p>git push # push&#x6240;&#x6709;&#x5206;&#x652F;</p>
+<p>git push origin master # &#x5C06;&#x672C;&#x5730;&#x4E3B;&#x5206;&#x652F;&#x63A8;&#x5230;&#x8FDC;&#x7A0B;&#x4E3B;&#x5206;&#x652F;</p>
+<p>git push -u origin master # &#x5C06;&#x672C;&#x5730;&#x4E3B;&#x5206;&#x652F;&#x63A8;&#x5230;&#x8FDC;&#x7A0B;(&#x5982;&#x65E0;&#x8FDC;&#x7A0B;&#x4E3B;&#x5206;&#x652F;&#x5219;&#x521B;&#x5EFA;&#xFF0C;&#x7528;&#x4E8E;&#x521D;&#x59CB;&#x5316;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;)</p>
+<p>git push origin <local_branch> # &#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#xFF0C; origin&#x662F;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x540D;</local_branch></p>
+<p>git push origin <local_branch>:<remote_branch> # &#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</remote_branch></local_branch></p>
+<p>git push origin :<remote_branch> #&#x5148;&#x5220;&#x9664;&#x672C;&#x5730;&#x5206;&#x652F;(git br -d <branch>)&#xFF0C;&#x7136;&#x540E;&#x518D;push&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</branch></remote_branch></p>
+<p>Git&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7BA1;&#x7406;</p>
+<p>GitHub</p>
+<p>git remote -v # &#x67E5;&#x770B;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x548C;&#x4ED3;&#x5E93;&#x540D;&#x79F0;</p>
+<p>git remote show origin # &#x67E5;&#x770B;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x4ED3;&#x5E93;&#x72B6;&#x6001;</p>
+<p>git remote add origin git@ github:robbin/robbin_site.git # &#x6DFB;&#x52A0;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5730;&#x5740;</p>
+<p>git remote set-url origin git@ github.com:robbin/robbin_site.git # &#x8BBE;&#x7F6E;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5730;&#x5740;(&#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5730;&#x5740;) git remote rm <repository> # &#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</repository></p>
+<p>&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</p>
+<p>git clone &#x2013;bare robbin_site robbin_site.git # &#x7528;&#x5E26;&#x7248;&#x672C;&#x7684;&#x9879;&#x76EE;&#x521B;&#x5EFA;&#x7EAF;&#x7248;&#x672C;&#x4ED3;&#x5E93;</p>
+<p>scp -r my_project.git git@ git.csdn.net:~ # &#x5C06;&#x7EAF;&#x4ED3;&#x5E93;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;</p>
+<p>mkdir robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git &#x2013;bare init # &#x5728;&#x670D;&#x52A1;&#x5668;&#x521B;&#x5EFA;&#x7EAF;&#x4ED3;&#x5E93;</p>
+<p>git remote add origin git@ github.com:robbin/robbin_site.git # &#x8BBE;&#x7F6E;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x5730;&#x5740;</p>
+<p>git push -u origin master # &#x5BA2;&#x6237;&#x7AEF;&#x9996;&#x6B21;&#x63D0;&#x4EA4;</p>
+<p>git push -u origin develop # &#x9996;&#x6B21;&#x5C06;&#x672C;&#x5730;develop&#x5206;&#x652F;&#x63D0;&#x4EA4;&#x5230;&#x8FDC;&#x7A0B;develop&#x5206;&#x652F;&#xFF0C;&#x5E76;&#x4E14;track</p>
+<p>git remote set-head origin master # &#x8BBE;&#x7F6E;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x7684;HEAD&#x6307;&#x5411;master&#x5206;&#x652F;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x547D;&#x4EE4;&#x8BBE;&#x7F6E;&#x8DDF;&#x8E2A;&#x8FDC;&#x7A0B;&#x5E93;&#x548C;&#x672C;&#x5730;&#x5E93;</p>
+<p>git branch &#x2013;set-upstream master origin/master</p>
+<p>git branch &#x2013;set-upstream develop origin/develop</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/16/泰国之旅前的做的功课/" itemprop="url">
                   泰国之旅前的做的功课
                 </a>
@@ -1521,118 +1708,13 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/10/16/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2015-10-16T23:32:54+08:00" content="2015-10-16">
-              2015-10-16
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/10/16/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/16/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1671,7 +1753,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
